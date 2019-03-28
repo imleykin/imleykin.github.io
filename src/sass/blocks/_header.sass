@@ -1,0 +1,149 @@
+//Общее расположение блоков
+.header
+  &__main-area
+    margin-top: 5px
+  &__catalog-menu
+    margin-top: 10px
+
+// Панель с телефоном
+.top-bar
+  background-color: #F5F5F5
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 32px
+  &__menu
+    list-style-type: none
+    margin: 0
+    padding: 0
+  &__menu-item
+    display: inline-block
+    margin-right: 30px
+    &__menu-item-link
+      color: #454545
+  &__phone-number
+    color: #454545
+
+// Главный блок с логотипом и поиском
+.header-main-area
+  &-wrap
+    display: flex
+    //justify-content: space-between
+    align-items: center
+    height: 100px
+
+// Логотип
+.header-logo-container
+  &__image
+    width: 140px
+    height: auto
+
+// Поиск
+.header-search
+  position: relative
+  flex-grow: 1
+  margin: 0 30px 0 70px
+  @media(max-width: 1199px)
+    margin: 0 30px 0 30px
+  &__input
+    border: 1px solid #D7D7D7
+    box-sizing: border-box
+    padding: 12px 35px
+    border-radius: 15px
+    width: 100%
+    height: 52px
+    color: #A0A0A0
+  &__submit
+    position: absolute
+    height: 52px
+    width: 60px
+    background: transparent
+    border: 0
+    top: 0
+    right: 0
+    cursor: pointer
+
+// Вход и регистрация
+.header-login
+  display: flex
+  align-items: center
+  &::after
+    content: ''
+    width: 0
+    height: 27px
+    border: 1px solid #B4B4B4
+    margin: 0 40px
+    @media(max-width: 1199px)
+      margin: 0 25px
+  &__icon
+    font-size: 11px
+  &__links
+    margin-left: 10px
+  &__link
+    display: block
+    line-height: 1.3
+    &:hover
+      text-decoration: underline
+  &__sign-in:hover
+    color: $primary-color
+  &__sign-up
+    color: $orange-color
+
+
+// Блок с корзиной
+.header-personal
+  display: flex
+  max-width: 175px
+  min-width: 100px
+  flex-grow: 1
+  align-items: center
+  justify-content: space-between
+
+// Меню каталога
+.catalog-menu
+  &-wrap
+    display: flex
+    justify-content: space-between
+    list-style-type: none
+    margin: 0
+    padding: 0
+    position: relative
+  &__item
+      &:hover
+        & .catalog-menu__item-link
+          color: $orange-color
+        & .catalog-menu__submenu
+          opacity: 1
+          height: auto
+          overflow: visible
+          transition: opacity .25s ease
+          padding: 20px
+  &__item-link
+    font-weight: 600
+    transition: none
+  &__item-arrow
+    margin-left: 8px
+  &__submenu
+    opacity: 0
+    height: 0
+    overflow: hidden
+    position: absolute
+    left: 0
+    right: 0
+    box-shadow: 0 6px 12px rgba(0,0,0,.175)
+    background-clip: padding-box
+    background-color: #fff
+    &-sections
+      display: flex
+
+.submenu-section
+  width: 16.66%
+  list-style-type: none
+  margin: 0
+  padding: 0
+  &__item
+    padding: 4px 0 4px 5px
+    &--title
+      & a
+        font-weight: bold

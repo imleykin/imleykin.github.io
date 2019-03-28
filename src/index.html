@@ -1,20 +1,209 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   <head>
-    <title>Sass Starter Pack</title>
+    <title>Ifort</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <h1>Sass Starter Pack</h1>
-    <p>
-      Edit the scss/style.sass file and it will automatically compile into
-      css/style.css
-    </p>
-    Привет
-    <p>NTcn</p>
-    <section class="test">Тестовая запись</section>
+    <header class="header">
+      <div class="header__top-bar top-bar">
+        <div class="main-wrapper">
+          <div class="top-bar-wrap">
+            <ul class="top-bar__menu">
+              <li class="top-bar__menu-item">
+                <a href="#" class="link top-bar__menu-item-link">
+                  Оплата и доставка
+                </a>
+              </li>
+              <li class="top-bar__menu-item">
+                <a href="#" class="link top-bar__menu-item-link"> Контакты </a>
+              </li>
+            </ul>
+
+            <div class="top-bar__right">
+              <a
+                href="tel:+7 (351) 262-20-01"
+                class="link top-bar__phone-number"
+              >
+                +7 (351) 262-20-05
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__main-area header-main-area">
+        <div class="main-wrapper">
+          <div class="header-main-area-wrap">
+            <div class="header-logo-container">
+              <a href="/" class="header-logo-container__link">
+                <img
+                  src="images/logo.svg"
+                  class="header-logo-container__image"
+                  alt="логотип Ifort"
+                />
+              </a>
+            </div>
+
+            <div class="header-search">
+              <form action="/catalog/" class="search1">
+                <input
+                  id="title-search-input-2"
+                  class="ifort-input header-search__input"
+                  type="text"
+                  name="q"
+                  placeholder="Поиск по сайту..."
+                  autocomplete="off"
+                />
+                <button
+                  id="search-submit-button"
+                  type="submit"
+                  class="header-search__submit"
+                >
+                  <span class="icon i-search"></span>
+                </button>
+              </form>
+            </div>
+
+            <div class="header-login">
+              <span class="icon i-user header-login__icon"></span>
+              <div class="header-login__links">
+                <a
+                  href=""
+                  class="link header-login__link header-login__sign-in"
+                >
+                  Вход
+                </a>
+                <a
+                  href=""
+                  class="link header-login__link header-login__sign-up"
+                >
+                  Регистрация
+                </a>
+              </div>
+            </div>
+
+            <div class="header-personal">
+              <div class="header-personal__item header-personal__compare">
+                <span class="icon i-header-compare"></span>
+              </div>
+              <div class="header-personal__item header-personal__favorite">
+                <span class="icon i-header-favorite"></span>
+              </div>
+              <div class="header-personal__item header-personal__cart">
+                <span class="icon i-header-cart"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="header__catalog-menu catalog-menu">
+        <div class="main-wrapper">
+          <ul class="catalog-menu-wrap">
+            <li class="catalog-menu__item">
+              <a href="" class="catalog-menu__item-link">
+                Компьютеры и Комплектующие
+                <span class="icon i-arrow-down catalog-menu__item-arrow"></span>
+              </a>
+              <div class="catalog-menu__submenu">
+                <div class="catalog-menu__submenu-images"></div>
+                <div class="catalog-menu__submenu-sections">
+                  <ul class="catalog-menu__submenu-section submenu-section">
+                    <li
+                      class="submenu-section__item submenu-section__item--title"
+                    >
+                      <a href="#">Комплектующие</a>
+                    </li>
+                    <li class="submenu-section__item">
+                      <a href="#">Корпуса и блоки питания к ним</a>
+                    </li>
+                    <li class="submenu-section__item">
+                      <a href="#">Корпуса и блоки питания к ним</a>
+                    </li>
+                    <li class="submenu-section__item">
+                      <a href="#">Корпуса и блоки питания к ним</a>
+                    </li>
+                    <li class="submenu-section__item">
+                      <a href="#">Корпуса и блоки питания к ним</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="" class="catalog-menu__item-link"> Квадрокоптеры </a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="" class="catalog-menu__item-link"> Смартфоны </a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="" class="catalog-menu__item-link"> Видео </a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="" class="catalog-menu__item-link">Акции </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="main-top-area"></section>
+
+    <section class="main-advantages">
+      <div class="main-wrapper">
+        <div class="main-advantages-wrap">
+          <div class="main-advantages__item">
+            <span
+              class="icon i-advantage-staff main-advantages__item-icon"
+            ></span>
+            <p class="main-advantages__item-text">
+              Индивидуальный <br />
+              подход к клиентам
+            </p>
+          </div>
+          <div class="main-advantages__item">
+            <span
+              class="icon i-advantage-warranty main-advantages__item-icon"
+            ></span>
+            <p class="main-advantages__item-text">
+              Гарантия <br />
+              лучшей цены
+            </p>
+          </div>
+          <div class="main-advantages__item">
+            <span
+              class="icon i-advantage-delivery main-advantages__item-icon"
+            ></span>
+            <p class="main-advantages__item-text">
+              Быстрая и бережная <br />
+              доставка
+            </p>
+          </div>
+          <div class="main-advantages__item">
+            <span
+              class="icon i-advantage-choice main-advantages__item-icon"
+            ></span>
+            <p class="main-advantages__item-text">
+              Огромный <br />
+              выбор товаров
+            </p>
+          </div>
+          <div class="main-advantages__item">
+            <span
+              class="icon i-advantage-gift main-advantages__item-icon"
+            ></span>
+            <p class="main-advantages__item-text">
+              Закажи на сайте, <br />
+              забери через 30 минут
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

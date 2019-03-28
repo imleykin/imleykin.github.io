@@ -5,12 +5,13 @@ var gulp = require("gulp"),
   cssnano = require("cssnano"),
   sourcemaps = require("gulp-sourcemaps"),
   browserSync = require("browser-sync").create(),
+  svgmin = require("gulp-svgmin"),
   svgSprite = require("gulp-svg-sprites");
 
 var paths = {
   styles: {
     // By using styles/**/*.sass we're telling gulp to check all folders for any sass file
-    src: "src/scss/*.sass",
+    src: ["src/sass/**/*.sass", "src/sass/**/*.scss"],
     // Compiled files will end up in whichever folder it's found in (partials are not compiled)
     dest: "src/css"
   }
@@ -31,7 +32,7 @@ function style() {
       .pipe(sass())
       .on("error", sass.logError)
       // Use postcss with autoprefixer and compress the compiled file using cssnano
-      .pipe(postcss([autoprefixer(), cssnano()]))
+      //.pipe(postcss([autoprefixer(), cssnano()]))
       // Now add/write the sourcemaps
       .pipe(sourcemaps.write())
       .pipe(gulp.dest(paths.styles.dest))
@@ -42,26 +43,37 @@ function style() {
 
 // Create sprites
 gulp.task("svg", function() {
-  return gulp
-    .src("src/svg/*.svg")
+  return (
+    gulp
+      .src("src/svg/*.svg")
 
-    .pipe(
-      svgSprite({
-        selector: "icon-%f",
+      // minify svg
+      .pipe(
+        svgmin({
+          js2svg: {
+            pretty: true
+          }
+        })
+      )
 
-        svg: {
-          sprite: "svg.svg"
-        },
+      .pipe(
+        svgSprite({
+          selector: "i-%f",
 
-        svgPath: "%f",
+          svg: {
+            sprite: "icons-sprite.svg"
+          },
 
-        cssFile: "svg_sprite.css",
+          svgPath: "%f",
 
-        common: "icon"
-      })
-    )
+          cssFile: "svg-sprite.css",
 
-    .pipe(gulp.dest("src/icons"));
+          common: "icon"
+        })
+      )
+
+      .pipe(gulp.dest("src/icons"))
+  );
 });
 
 // A simple task to reload the page

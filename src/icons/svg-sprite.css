@@ -1,0 +1,227 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("icons-sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 5.9em 55.3em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../icons-sprite.png");
+}
+
+
+
+  .icon.i-advantage-choice:before {
+      background-position: 0em 0em;
+      width: 4.7em;
+      height: 4.7em;
+  }
+
+
+
+
+  .icon.i-advantage-delivery:before {
+      background-position: 0em -4.7em;
+      width: 5.9em;
+      height: 4.3em;
+  }
+
+
+
+
+  .icon.i-advantage-gift:before {
+      background-position: 0em -9em;
+      width: 5.4em;
+      height: 4.1em;
+  }
+
+
+
+
+  .icon.i-advantage-staff:before {
+      background-position: 0em -13.1em;
+      width: 5em;
+      height: 5.3em;
+  }
+
+
+
+
+  .icon.i-advantage-warranty:before {
+      background-position: 0em -18.4em;
+      width: 3.8em;
+      height: 5.1em;
+  }
+
+
+
+
+  .icon.i-arrow-down:before {
+      background-position: 0em -23.5em;
+      width: 0.8em;
+      height: 0.5em;
+  }
+
+
+
+
+  .icon.i-arrow-down-active:before {
+      background-position: 0em -24em;
+      width: 0.8em;
+      height: 0.5em;
+  }
+
+
+
+
+  .icon.i-city:before {
+      background-position: 0em -24.5em;
+      width: 2.1em;
+      height: 2em;
+  }
+
+
+
+
+  .icon.i-header-cart:before {
+      background-position: 0em -26.5em;
+      width: 2.5em;
+      height: 2.5em;
+  }
+
+
+
+
+  .icon.i-header-compare:before {
+      background-position: 0em -29em;
+      width: 2.4em;
+      height: 2.3em;
+  }
+
+
+
+
+  .icon.i-header-favorite:before {
+      background-position: 0em -31.3em;
+      width: 2.1em;
+      height: 2.1em;
+  }
+
+
+
+
+  .icon.i-ifort-arrow-black:before {
+      background-position: 0em -33.4em;
+      width: 2.7em;
+      height: 1.3em;
+  }
+
+
+
+
+  .icon.i-ifort-arrow-orange:before {
+      background-position: 0em -34.7em;
+      width: 2.7em;
+      height: 1.3em;
+  }
+
+
+
+
+  .icon.i-item-cart:before {
+      background-position: 0em -36em;
+      width: 2.4em;
+      height: 2.1em;
+  }
+
+
+
+
+  .icon.i-item-cart-active:before {
+      background-position: 0em -38.1em;
+      width: 2.4em;
+      height: 2.1em;
+  }
+
+
+
+
+  .icon.i-item-compare:before {
+      background-position: 0em -40.2em;
+      width: 1.9em;
+      height: 1.8em;
+  }
+
+
+
+
+  .icon.i-item-compare-active:before {
+      background-position: 0em -42em;
+      width: 1.9em;
+      height: 1.8em;
+  }
+
+
+
+
+  .icon.i-item-favorite:before {
+      background-position: 0em -43.8em;
+      width: 2em;
+      height: 1.7em;
+  }
+
+
+
+
+  .icon.i-item-favorite-active:before {
+      background-position: 0em -45.5em;
+      width: 2em;
+      height: 1.7em;
+  }
+
+
+
+
+  .icon.i-search:before {
+      background-position: 0em -47.2em;
+      width: 2.6em;
+      height: 2.6em;
+  }
+
+
+
+
+  .icon.i-search-active:before {
+      background-position: 0em -49.8em;
+      width: 2.6em;
+      height: 2.6em;
+  }
+
+
+
+
+  .icon.i-select:before {
+      background-position: 0em -52.4em;
+      width: 0.9em;
+      height: 0.5em;
+  }
+
+
+
+
+  .icon.i-user:before {
+      background-position: 0em -52.9em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+
