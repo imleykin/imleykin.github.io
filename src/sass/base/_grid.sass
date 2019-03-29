@@ -1,11 +1,17 @@
 @import 'smart-grid'
 
+// .main-wrapper
+//   max-width: 1200px
+//   margin: 0 auto
+//   box-sizing: border-box
+//   width: 100%
+//   //overflow: hidden
+//   @media(max-width: 1199px)
+//       padding: 0 20px
+//   &.mobile-full-width
+//     +sm(padding, 0)
+
 .main-wrapper
-  max-width: 1200px
-  margin: 0 auto
-  box-sizing: border-box
-  width: 100%
-  @media(max-width: 1199px)
-      padding: 0 20px
+  +wrapper()
   &.mobile-full-width
-    +sm(padding, 0)
+    +sm(padding, 0)  
