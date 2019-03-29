@@ -4,6 +4,17 @@
     <title>Ifort</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -151,24 +162,59 @@
         </div>
       </nav>
     </header>
-    <!-- <div class="main-page"></div> -->
-    <div class="main-top-area">
-      <div class="main-wrapper">
-        <div class="main-top-area__slider-wrapper">
-          <div class="main-top-area__slider">
-            <div class="main-top-area__slider-trigger owl-carousel owl-theme">
+
+    <div class="page-main">
+      <div class="page-main__top-area main-top-area">
+        <div class="main-wrapper mobile-full-width">
+          <div class="main-top-area__slide banner-slider">
+            <!-- <div class="banner-slider-wrap"> -->
+            <div class="banner-slider__trigger owl-carousel owl-theme">
               <!-- <?foreach($arResult["ITEMS"] as $arItem) :?> -->
-              <div>
+              <div class="banner-slider__item">
                 <a href="#">
                   <img
                     src="images/banner.jpg"
-                    class="slider__image-desktop"
+                    class="banner-slider__image-desktop"
                     alt="фотография баннера"
                   />
                   <!--
                     <img
                       src=""
-                      class="slider__image-mobile"
+                      class="banner-slider__image-mobile"
+                      alt="фотография баннера"
+                    />
+                  -->
+                </a>
+              </div>
+
+              <div class="banner-slider__item">
+                <a href="#">
+                  <img
+                    src="images/banner.jpg"
+                    class="banner-slider__image-desktop"
+                    alt="фотография баннера"
+                  />
+                  <!--
+                    <img
+                      src=""
+                      class="banner-slider__image-mobile"
+                      alt="фотография баннера"
+                    />
+                  -->
+                </a>
+              </div>
+
+              <div class="banner-slider__item">
+                <a href="#">
+                  <img
+                    src="images/banner.jpg"
+                    class="banner-slider__image-desktop"
+                    alt="фотография баннера"
+                  />
+                  <!--
+                    <img
+                      src=""
+                      class="banner-slider__image-mobile"
                       alt="фотография баннера"
                     />
                   -->
@@ -176,58 +222,58 @@
               </div>
               <!-- <?endforeach;?> -->
             </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="main-advantages">
-      <div class="main-wrapper">
-        <div class="main-advantages-wrap">
-          <div class="main-advantages__item">
-            <span
-              class="icon i-advantage-staff main-advantages__item-icon"
-            ></span>
-            <p class="main-advantages__item-text">
-              Индивидуальный <br />
-              подход к клиентам
-            </p>
-          </div>
-          <div class="main-advantages__item">
-            <span
-              class="icon i-advantage-warranty main-advantages__item-icon"
-            ></span>
-            <p class="main-advantages__item-text">
-              Гарантия <br />
-              лучшей цены
-            </p>
-          </div>
-          <div class="main-advantages__item">
-            <span
-              class="icon i-advantage-delivery main-advantages__item-icon"
-            ></span>
-            <p class="main-advantages__item-text">
-              Быстрая и бережная <br />
-              доставка
-            </p>
-          </div>
-          <div class="main-advantages__item">
-            <span
-              class="icon i-advantage-choice main-advantages__item-icon"
-            ></span>
-            <p class="main-advantages__item-text">
-              Огромный <br />
-              выбор товаров
-            </p>
-          </div>
-          <div class="main-advantages__item">
-            <span
-              class="icon i-advantage-gift main-advantages__item-icon"
-            ></span>
-            <p class="main-advantages__item-text">
-              Закажи на сайте, <br />
-              забери через 30 минут
-            </p>
+      <div class="page-main__advantages main-advantages">
+        <div class="main-wrapper">
+          <div class="main-advantages-wrap">
+            <div class="main-advantages__item">
+              <span
+                class="icon i-advantage-staff main-advantages__item-icon"
+              ></span>
+              <p class="main-advantages__item-text">
+                Индивидуальный <br />
+                подход к клиентам
+              </p>
+            </div>
+            <div class="main-advantages__item">
+              <span
+                class="icon i-advantage-warranty main-advantages__item-icon"
+              ></span>
+              <p class="main-advantages__item-text">
+                Гарантия <br />
+                лучшей цены
+              </p>
+            </div>
+            <div class="main-advantages__item">
+              <span
+                class="icon i-advantage-delivery main-advantages__item-icon"
+              ></span>
+              <p class="main-advantages__item-text">
+                Быстрая и бережная <br />
+                доставка
+              </p>
+            </div>
+            <div class="main-advantages__item">
+              <span
+                class="icon i-advantage-choice main-advantages__item-icon"
+              ></span>
+              <p class="main-advantages__item-text">
+                Огромный <br />
+                выбор товаров
+              </p>
+            </div>
+            <div class="main-advantages__item">
+              <span
+                class="icon i-advantage-gift main-advantages__item-icon"
+              ></span>
+              <p class="main-advantages__item-text">
+                Закажи на сайте, <br />
+                забери через 30 минут
+              </p>
+            </div>
           </div>
         </div>
       </div>

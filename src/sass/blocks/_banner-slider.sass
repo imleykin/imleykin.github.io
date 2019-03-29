@@ -1,0 +1,24 @@
+// Слайдер с баннерами
+
+.banner-slider
+  position: relative
+  max-width: 884px
+  max-height: 350px
+  //height: auto
+  overflow: hidden
+  &__image-desktop
+    display: block
+  &__image-mobile
+    display: none
+  .owl-dots
+    display: inline-block
+    position: absolute
+    bottom: 5%
+    left: 5%
+  .owl-dot
+    margin-right: 25px
+  .owl-dot span
+    background: #fff !important
+  .owl-dot.active span,
+  .owl-dot:hover span
+    background: $orange-color !important
