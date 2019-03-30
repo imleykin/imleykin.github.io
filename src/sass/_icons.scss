@@ -6,13 +6,13 @@
   content: " ";
   vertical-align: middle;
   display: inline-block;
-  background-image: url("../../icons/icons-sprite.svg");
+  background-image: url("../icons/icons-sprite.svg");
   background-repeat: no-repeat;
   background-size: 5.9em 55.3em;
 }
 
 .no-svg .icon:before {
-  background-image: url("../../icons/icons-sprite.png");
+  background-image: url("../icons/icons-sprite.png");
 }
 
 .icon.i-advantage-choice:before {
