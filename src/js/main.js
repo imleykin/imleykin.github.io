@@ -17,4 +17,26 @@ $(document).ready(function() {
   });
 
   mainSlider.trigger("refresh.owl.carousel"); // fix owl bug
+
+  function calculateHMSleft() {
+    //calculate
+    var now = new Date();
+    var hoursleft = 23 - now.getHours();
+    var minutesleft = 59 - now.getMinutes();
+    var secondsleft = 59 - now.getSeconds();
+
+    //format 0 prefixes
+    if (minutesleft < 10) minutesleft = "0" + minutesleft;
+    if (secondsleft < 10) secondsleft = "0" + secondsleft;
+
+    //display
+    $(".product-item__promo-timer").html(
+      hoursleft + ":" + minutesleft + ":" + secondsleft
+    );
+  }
+
+  $(document).ready(function() {
+    calculateHMSleft();
+    setInterval(calculateHMSleft, 1000);
+  });
 });

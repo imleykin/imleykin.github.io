@@ -15,7 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -227,7 +227,58 @@
             </div>
             <div
               class="main-top-area__promo-day product-item product-item product-item_shadow"
-            ></div>
+            >
+              <div class="product-item__promo-info">
+                <p class="product-item__promo-title">Товар дня</p>
+                <p class="product-item__promo-timer"></p>
+                <div class="product-item__promo-discount">
+                  <div class="product-item__promo-discount-bg"></div>
+                  <div class="product-item__promo-discount-wrap">
+                    <p class="product-item__promo-discount-percent">- 30%</p>
+                    <div class="product-item__promo-discount-economy">
+                      <p class="product-item__promo-discount-economy-text">
+                        Экономия
+                      </p>
+                      <p class="product-item__promo-discount-economy-text">
+                        1000 руб.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-item__controls">
+                <a
+                  href="#"
+                  class="product-item__to-compare-button product-item__control"
+                  ><span class="icon i-item-compare"></span>
+                </a>
+                <a
+                  href="#"
+                  class="product-item__to-favorite-button product-item__control"
+                  ><span class="icon i-item-favorite"></span>
+                </a>
+                <a
+                  href="#"
+                  class="product-item__to-cart-button product-item__control product-item__control_to-cart"
+                >
+                  + В корзину
+                  <span
+                    class="icon i-item-cart product-item__icon-to-cart"
+                  ></span>
+                </a>
+
+                <a
+                  href="#"
+                  class="product-item__to-cart-button product-item__control product-item__control_to-cart addded"
+                  style="display: none"
+                >
+                  + В корзине
+                  <span
+                    class="icon i-item-cart product-item__icon-to-cart"
+                  ></span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

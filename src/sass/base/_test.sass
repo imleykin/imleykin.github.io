@@ -1,0 +1,11 @@
+@import "../vendor/bootstrap/bootstrap-grid"
+
+$grid-columns: 12
+$grid-gutter-width: 30px
+
+.main-wrapper
+  max-width: 1230px
+  @include make-container()
+  &.mobile-full-width
+    @include media-breakpoint-down(sm)
+      padding: 0

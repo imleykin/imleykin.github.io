@@ -1,8 +1,79 @@
 // Карточка товара в каталоге
 .product-item
+  position: relative
   width: 290px
   height: 350px
+  padding: 15px 24px
+  box-sizing: border-box
   background: #FFFFFF
   border-radius: 15px
+  overflow: hidden
   &.product-item_shadow
-    box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.08)
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08)
+  &__promo-info
+    font-weight: bold
+    font-size: 20px
+  &__promo-title
+    margin: 0
+    margin-bottom: 4px
+  &__promo-timer
+    margin: 0
+    color: #A0A0A0
+  &__promo-discount
+    position: absolute
+    top: 0
+    right: 0
+    width: 100px
+    height: 100px
+    &-bg
+      z-index: 10
+      position: absolute
+      width: 140px
+      height: 140px
+      background: linear-gradient(334.09deg, #FFC700 12.56%, #FFE300 72.49%), #FFE300
+      border-radius: 100%
+      transform: matrix(-1, 0, 0, 1, 0, 0)
+      top: -45px
+      right: -30px
+    &-wrap
+      position: absolute
+      top: 16px
+      left: 15px
+      text-align: right
+      z-index: 20
+    &-percent
+      font-size: 20px
+      font-weight: bold
+      margin: 0
+    &-economy
+      font-weight: 300
+      font-size: 11px
+      line-height: 1.2
+      &-text
+        margin: 0
+  &__controls
+    display: flex
+    justify-content: space-between
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    height: 48px
+  &__control
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 64px
+    border: 1px solid #EEEEEE
+    border-left: 0
+    border-bottom: 0
+    &_to-cart
+      color: #fff
+      background: $orange-color
+      flex-grow: 1
+      border-right: 0
+      &:hover
+        color: $primary-color
+        background: linear-gradient(350.68deg, #FFC700 12.56%, #FFE300 72.49%)
+  &__icon-to-cart
+    margin-left: 7px
