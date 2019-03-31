@@ -16,7 +16,7 @@ $(document).ready(function() {
     // navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
   });
 
-  mainSlider.trigger("refresh.owl.carousel"); // fix owl bug
+  // mainSlider.trigger("refresh.owl.carousel"); // fix owl bug
 
   function calculateHMSleft() {
     //calculate
