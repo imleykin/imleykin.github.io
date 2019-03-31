@@ -1,3 +1,20 @@
+var fixOwl = function() {
+  var $stage = $(".owl-stage"),
+    stageW = $stage.width(),
+    $el = $(".owl-item"),
+    elW = 0;
+  $el.each(function() {
+    elW +=
+      $(this).width() +
+      +$(this)
+        .css("margin-right")
+        .slice(0, -2);
+  });
+  if (elW > stageW) {
+    $stage.width(elW);
+  }
+};
+
 $(document).ready(function() {
   var mainSlider = $(".banner-slider__trigger");
   mainSlider.owlCarousel({
@@ -9,10 +26,11 @@ $(document).ready(function() {
     ],
     items: 1,
     //autoWidth: true,
-    //autoHeight:true,
     autoplay: false,
     autoplayHoverPause: true,
-    margin: 3
+    margin: 3,
+    onInitialized: fixOwl,
+    onRefreshed: fixOwl
     // navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
   });
 
