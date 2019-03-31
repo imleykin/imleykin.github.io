@@ -1,44 +1,45 @@
-@import '../../base/smart-grid'
-//@import '../../vendor/bootstrap/bootstrap-grid'
-
-.main-advantages
-  &-wrap
-    +row-flex()
-    justify-content: center
-  &__item
-    +col()
-    +size(2.4)
-    +size-md(4)
-    +size-sm(12)
-    display: flex
-    align-items: center
-    margin-bottom: 10px
-    &-icon
-      margin-right: 10px
-      +sm(min-width, 65px)
-
 // .main-advantages
 //   &-wrap
-//     @include make-row()
+//     +row-flex()
 //     justify-content: center
 //   &__item
-//     @include make-col-ready()
-//
-//     @include make-col(2.4)
-//
-//     @include media-breakpoint-down(md)
-//       @include make-col(3)
-//
-//     @include media-breakpoint-down(sm)
-//       @include make-col(6)
-//
-//     @include media-breakpoint-down(xs)
-//       @include make-col(12)
-//
+//     +col()
+//     +size(2.4)
+//     +size-md(4)
+//     +size-sm(12)
 //     display: flex
 //     align-items: center
 //     margin-bottom: 10px
 //     &-icon
 //       margin-right: 10px
-//       @include media-breakpoint-down(sm)
-//         min-width: 65px
+//       +sm(min-width, 65px)
+
+$advantages-gutter: 30px
+
+.main-advantages
+  &-wrap
+    @include make-row($advantages-gutter)
+    justify-content: center
+  &__item
+    @include make-col-ready($advantages-gutter)
+
+    @include make-col(2.4)
+
+    @include media-breakpoint-down(md)
+      @include make-col(3)
+
+    @include media-breakpoint-down(sm)
+      @include make-col(6)
+
+    @include media-breakpoint-down(xs)
+      @include make-col(12)
+
+    display: flex
+    align-items: center
+    margin-bottom: 10px
+
+    //border: 2px solid red
+    &-icon
+      margin-right: 10px
+      @include media-breakpoint-down(sm)
+        min-width: 65px

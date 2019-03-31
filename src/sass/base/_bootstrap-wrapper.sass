@@ -1,0 +1,9 @@
+$container-width: 1200px
+$container-field: 20px
+
+.main-wrapper
+  max-width: ($container-width + $container-field * 2)
+  @include make-container($container-field * 2)
+  &.mobile-full-width
+    @include media-breakpoint-down(sm)
+      padding: 0
