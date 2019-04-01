@@ -22,7 +22,7 @@ $main-categories-gutter: 15px
       &:nth-child(6n-5),
       &:nth-child(6n)
         @include make-col(12)
-    &:last-child > *
+    > .main-categories__item-sales
       background: linear-gradient(51.48deg, #FBDA61 -0.31%, #FF5ACD 91.89%)
     &-inner
       display: block
@@ -69,3 +69,6 @@ $main-categories-gutter: 15px
       // border: 2px solid red
       @include media-breakpoint-down(xs)
         display: none
+  &__to-catalog
+    text-align: center
+    margin-top: 28px
