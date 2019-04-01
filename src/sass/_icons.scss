@@ -101,7 +101,8 @@
   height: 2.1em;
 }
 
-.icon.i-item-cart-active:before {
+.icon.i-item-cart-active:before,
+.product-item__to-cart-button:hover .icon.i-item-cart:before {
   background-position: 0em -38.1em;
   width: 2.4em;
   height: 2.1em;
@@ -113,7 +114,8 @@
   height: 1.8em;
 }
 
-.icon.i-item-compare-active:before {
+.icon.i-item-compare-active:before,
+.product-item__to-compare-button:hover .icon.i-item-compare:before {
   background-position: 0em -42em;
   width: 1.9em;
   height: 1.8em;
@@ -125,7 +127,8 @@
   height: 1.7em;
 }
 
-.icon.i-item-favorite-active:before {
+.icon.i-item-favorite-active:before,
+.product-item__to-favorite-button:hover .icon.i-item-favorite:before {
   background-position: 0em -45.5em;
   width: 2em;
   height: 1.7em;
