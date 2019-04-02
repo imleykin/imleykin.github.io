@@ -1,3 +1,20 @@
+function calculateHMSleft() {
+  //calculate
+  var now = new Date();
+  var hoursleft = 23 - now.getHours();
+  var minutesleft = 59 - now.getMinutes();
+  var secondsleft = 59 - now.getSeconds();
+
+  //format 0 prefixes
+  if (minutesleft < 10) minutesleft = "0" + minutesleft;
+  if (secondsleft < 10) secondsleft = "0" + secondsleft;
+
+  //display
+  $(".product-item__promo-timer").html(
+    hoursleft + ":" + minutesleft + ":" + secondsleft
+  );
+}
+
 var fixOwl = function() {
   var $stage = $(".owl-stage"),
     stageW = $stage.width(),
@@ -36,23 +53,6 @@ $(document).ready(function() {
 
   // mainSlider.trigger("refresh.owl.carousel"); // fix owl bug
 
-  function calculateHMSleft() {
-    //calculate
-    var now = new Date();
-    var hoursleft = 23 - now.getHours();
-    var minutesleft = 59 - now.getMinutes();
-    var secondsleft = 59 - now.getSeconds();
-
-    //format 0 prefixes
-    if (minutesleft < 10) minutesleft = "0" + minutesleft;
-    if (secondsleft < 10) secondsleft = "0" + secondsleft;
-
-    //display
-    $(".product-item__promo-timer").html(
-      hoursleft + ":" + minutesleft + ":" + secondsleft
-    );
-  }
-
   calculateHMSleft();
   setInterval(calculateHMSleft, 1000);
 
@@ -60,6 +60,31 @@ $(document).ready(function() {
     maxWidth: 980,
     pushContent: $(".header"),
     customToggle: $(".header-mobile__toggle"),
-    disableBody: false
+    disableBody: false,
+    labelClose: "закрыть",
+    labelBack: "назад"
+  });
+
+  $(".products-slider__trigger").owlCarousel({
+    loop: false,
+    items: 5,
+    autoplay: false,
+    dots: false,
+    autoplayHoverPause: true,
+    margin: 4,
+    responsive: {
+      0: {
+        items: 1
+      },
+      660: {
+        items: 2
+      },
+      963: {
+        items: 3
+      },
+      1197: {
+        items: 4
+      }
+    }
   });
 });

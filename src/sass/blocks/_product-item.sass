@@ -1,15 +1,23 @@
 // Карточка товара в каталоге
 .product-item
   position: relative
-  width: 290px
+  width: 270px
   height: 350px
-  padding: 15px 24px 47px 24px
+  padding: 15px 24px 55px 24px
   box-sizing: border-box
   background: #FFFFFF
   border-radius: 15px
   overflow: hidden
+  display: flex
+  flex-direction: column
+  @include media-breakpoint-down(md)
+    margin: 0 auto
   &.product-item_shadow
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08)
+  &.product-item_large
+    width: 290px
+  &__ribbons
+
   &__promo-info
     font-weight: bold
     font-size: 20px
@@ -78,19 +86,32 @@
   &__icon-to-cart
     margin-left: 7px
   &__product-details
-    margin-top: 24px
+    margin-top: auto
+    margin-bottom: 10px
     text-align: center
-    height: 215px
+    // height: 230px
   &__product-image
-    max-width: 100%
-    max-height: 120px
+    display: inline-block !important
+    max-width: 100%  !important
+    max-height: 125px  !important
+    width: auto !important
   &__product-title
-    margin-bottom: 15px
+    margin-bottom: 20px
     text-align: center
-  &__promo-prices-wrap
+  &__prices
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    &-left-area
+      text-align: left
+    &-right-area
+      text-align: right
+  &__promo-prices
     display: flex
     justify-content: space-between
     align-items: center
+  &__economy
+    margin: 0
   &__current-price
     font-size: 20px
     margin: 0
@@ -98,3 +119,23 @@
     text-decoration-line: line-through
     color: #A4A4A4
     margin: 0
+
+.ribbons
+  display: flex
+  flex-wrap: wrap
+  margin-left: -3px
+  margin-right: -3px
+  &__item
+    // border: 2px solid red
+    margin-left: 3px
+    margin-right: 3px
+    color: #fff
+    font-weight: 600
+    font-size: 12px
+    padding: 4px 8px
+    border-radius: 15px
+    margin-bottom: 5px
+    &-new
+      background: linear-gradient(68.46deg, #FF5ACD -1.84%, #00A3FF 112.15%)
+    &-recommend
+      background: linear-gradient(63.23deg, #FF5200 17.11%, #FFE300 112.13%)
