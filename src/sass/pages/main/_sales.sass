@@ -1,0 +1,12 @@
+.main-sales
+  &__wrap
+    @include make-row()
+  &__item
+    @include make-col-ready()
+    @include make-col(4)
+    @include media-breakpoint-down(md)
+      @include make-col(12)
+      text-align: center
+  &__image
+    max-width: 100%
+    height: auto

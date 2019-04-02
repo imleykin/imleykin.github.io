@@ -71,13 +71,36 @@ $(document).ready(function() {
     autoplay: false,
     dots: false,
     autoplayHoverPause: true,
-    margin: 4,
+    margin: 33,
     responsive: {
       0: {
         items: 1
       },
       660: {
         items: 2
+      },
+      963: {
+        items: 3
+      },
+      1197: {
+        items: 4
+      }
+    }
+  });
+
+  $(".brands-slider__trigger").owlCarousel({
+    loop: false,
+    items: 5,
+    autoplay: false,
+    dots: false,
+    autoplayHoverPause: true,
+    margin: 4,
+    responsive: {
+      0: {
+        items: 2
+      },
+      660: {
+        items: 3
       },
       963: {
         items: 3
