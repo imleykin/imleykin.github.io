@@ -53,8 +53,13 @@ $(document).ready(function() {
     );
   }
 
-  $(document).ready(function() {
-    calculateHMSleft();
-    setInterval(calculateHMSleft, 1000);
+  calculateHMSleft();
+  setInterval(calculateHMSleft, 1000);
+
+  $("#main-nav").hcOffcanvasNav({
+    maxWidth: 980,
+    pushContent: $(".header"),
+    customToggle: $(".header-mobile__toggle"),
+    disableBody: false
   });
 });
