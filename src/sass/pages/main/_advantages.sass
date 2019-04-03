@@ -27,12 +27,14 @@ $advantages-gutter: 30px
 
     @include media-breakpoint-down(md)
       @include make-col(4)
+      justify-content: center
 
     @include media-breakpoint-down(sm)
       @include make-col(6)
 
     @include media-breakpoint-down(xs)
       @include make-col(12)
+      justify-content: flex-start
 
     display: flex
     align-items: center

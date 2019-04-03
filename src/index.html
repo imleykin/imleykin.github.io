@@ -54,7 +54,7 @@
         <div class="header-desktop__main-area header-main-area">
           <div class="main-wrapper">
             <div class="header-main-area-wrap">
-              <div class="header-logo-container">
+              <div class="header-main-area__logo header-logo-container">
                 <a href="/" class="header-logo-container__link">
                   <img
                     src="images/logo.svg"
@@ -64,11 +64,11 @@
                 </a>
               </div>
 
-              <div class="header-search">
+              <div class="header-main-area__search products-search">
                 <form action="/catalog/" class="search1">
                   <input
                     id="title-search-input-2"
-                    class="ifort-input header-search__input"
+                    class="ifort-input products-search__input"
                     type="text"
                     name="q"
                     placeholder="Поиск по сайту..."
@@ -77,14 +77,14 @@
                   <button
                     id="search-submit-button"
                     type="submit"
-                    class="header-search__submit"
+                    class="products-search__submit"
                   >
                     <span class="icon i-search"></span>
                   </button>
                 </form>
               </div>
 
-              <div class="header-login">
+              <div class="header-main-area__login header-login">
                 <span class="icon i-user header-login__icon"></span>
                 <div class="header-login__links">
                   <a
@@ -1951,6 +1951,133 @@
         </div>
       </div>
     </div>
+
+    <footer class="footer">
+      <div class="main-wrapper">
+        <div class="footer__wrap">
+          <div class="footer__left-area">
+            <div class="footer__logo footer-logo">
+              <a href="" class="footer-logo__link">
+                <img src="images/logo.svg" class="footer-logo__image" alt="" />
+              </a>
+            </div>
+            <div class="footer__contacts footer-contacts">
+              <div class="footer-contacts__contact">
+                <span class="icon i-city footer-contacts__contact-icon"></span>
+                <p class="footer-contacts__contact-text">
+                  Челябинск, ул. Энтузиастов, 21
+                </p>
+              </div>
+              <div class="footer-contacts__contact">
+                <span class="icon i-city footer-contacts__contact-icon"></span>
+                <p class="footer-contacts__contact-text">
+                  Часы работы: <br />
+                  Пн-Пт.: с 10:00 до 19:00 <br />
+                  Сб-Вс.: с 10:00 до 18:00
+                </p>
+              </div>
+              <div class="footer-contacts__contact">
+                <span class="icon i-city footer-contacts__contact-icon"></span>
+                <p class="footer-contacts__contact-text">info@site.ru</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer__center-area">
+            <ul class="footer__menu footer-menu">
+              <li class="footer-menu__item">
+                <a href="" class="footer-menu__item-link"> О компании</a>
+                <ul class="footer-menu__submenu">
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link">
+                      О компании
+                    </a>
+                  </li>
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link">
+                      Новости
+                    </a>
+                  </li>
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link">
+                      Сотрудники
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="footer-menu__item">
+                <a href="" class="footer-menu__item-link">Информация</a>
+                <ul class="footer-menu__submenu">
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link">
+                      О компании
+                    </a>
+                  </li>
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link">
+                      Новости
+                    </a>
+                  </li>
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link">
+                      Сотрудники
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="footer-menu__item">
+                <a href="" class="footer-menu__item-link">Помощь</a>
+                <ul class="footer-menu__submenu">
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link">
+                      О компании
+                    </a>
+                  </li>
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link">
+                      Новости
+                    </a>
+                  </li>
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link">
+                      Сотрудники
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__right-area">
+            <div class="footer__search products-search">
+              <form action="/catalog/" class="search1">
+                <input
+                  id="title-search-input-2"
+                  class="ifort-input products-search__input"
+                  type="text"
+                  name="q"
+                  placeholder="Поиск по сайту..."
+                  autocomplete="off"
+                />
+                <button
+                  id="search-submit-button"
+                  type="submit"
+                  class="products-search__submit"
+                >
+                  <span class="icon i-search"></span>
+                </button>
+              </form>
+            </div>
+
+            <div class="footer__phone footer-phone">
+              <a href="tel:+7 (351) 262-20-01" class="footer-phone__link">
+                +7 (351) 262-20-05
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <nav id="main-nav" style="display:none">
       <ul>
