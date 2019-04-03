@@ -142,9 +142,6 @@ $(document).ready(function() {
   });
 
   setTimeout(function() {
-    mainSlider.trigger("refresh.owl.carousel"); // fix owl bug
-    $(".products-slider__trigger").trigger("refresh.owl.carousel"); // fix owl bug
-    $(".brands-slider__trigger").trigger("refresh.owl.carousel"); // fix owl bug
-    $(".recently-viewed__slider-trigger").trigger("refresh.owl.carousel"); // fix owl bug
-  }, 1);
+    $(".owl-carousel").trigger("refresh.owl.carousel");
+  }, 3000);
 });
