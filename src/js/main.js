@@ -51,8 +51,6 @@ $(document).ready(function() {
     // navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
   });
 
-  // mainSlider.trigger("refresh.owl.carousel"); // fix owl bug
-
   calculateHMSleft();
   setInterval(calculateHMSleft, 1000);
 
@@ -85,7 +83,9 @@ $(document).ready(function() {
       1197: {
         items: 4
       }
-    }
+    },
+    onInitialized: fixOwl,
+    onRefreshed: fixOwl
   });
 
   $(".brands-slider__trigger").owlCarousel({
@@ -108,6 +108,14 @@ $(document).ready(function() {
       1197: {
         items: 4
       }
-    }
+    },
+    onInitialized: fixOwl,
+    onRefreshed: fixOwl
   });
+
+  setTimeout(function() {
+    mainSlider.trigger("refresh.owl.carousel"); // fix owl bug
+    $(".products-slider__trigger").trigger("refresh.owl.carousel"); // fix owl bug
+    $(".brands-slider__trigger").trigger("refresh.owl.carousel"); // fix owl bug
+  }, 1);
 });
