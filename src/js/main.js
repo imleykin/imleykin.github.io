@@ -113,9 +113,38 @@ $(document).ready(function() {
     onRefreshed: fixOwl
   });
 
+  $(".recently-viewed__slider-trigger").owlCarousel({
+    loop: false,
+    items: 5,
+    autoplay: false,
+    dots: false,
+    autoplayHoverPause: true,
+    margin: 0,
+    responsive: {
+      0: {
+        items: 1
+      },
+      550: {
+        items: 2
+      },
+      660: {
+        items: 3
+      },
+      963: {
+        items: 3
+      },
+      1197: {
+        items: 4
+      }
+    },
+    onInitialized: fixOwl,
+    onRefreshed: fixOwl
+  });
+
   setTimeout(function() {
     mainSlider.trigger("refresh.owl.carousel"); // fix owl bug
     $(".products-slider__trigger").trigger("refresh.owl.carousel"); // fix owl bug
     $(".brands-slider__trigger").trigger("refresh.owl.carousel"); // fix owl bug
+    $(".recently-viewed__slider-trigger").trigger("refresh.owl.carousel"); // fix owl bug
   }, 1);
 });
