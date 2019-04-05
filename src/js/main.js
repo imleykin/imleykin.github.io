@@ -75,12 +75,13 @@ $(document).ready(function() {
   )[0];
 
   var header = document.getElementsByClassName("header-mobile")[0];
+  var body = document.getElementsByTagName("body")[0];
 
   mobileMenuToggleButton.onclick = function(e) {
     e.preventDefault();
     this.classList.toggle("is-active");
     mobileMenu.classList.toggle("mobile-menu_opened");
-    // header.classList.toggle("header-mobile_menu-opened");
+    body.classList.toggle("fixed");
   };
 
   // /Мобильное меню
