@@ -1,5 +1,6 @@
 //Общее расположение блоков
 .header-desktop
+  margin-bottom: 30px
   @include media-breakpoint-down(md)
     display: none
   margin-bottom: 30px
@@ -7,6 +8,15 @@
     margin-top: 5px
   &__catalog-menu
     margin-top: 10px
+  &__personal
+    max-width: 175px
+    min-width: 100px
+    flex-grow: 1
+
+.personal-section
+  display: flex
+  align-items: center
+  justify-content: space-between
 
 // Панель с телефоном
 .top-bar
@@ -95,14 +105,7 @@
     color: $orange-color
 
 
-// Блок с корзиной
-.header-personal
-  display: flex
-  max-width: 175px
-  min-width: 100px
-  flex-grow: 1
-  align-items: center
-  justify-content: space-between
+
 
 // Меню каталога
 .catalog-menu

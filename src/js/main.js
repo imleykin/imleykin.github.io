@@ -81,7 +81,7 @@ $(document).ready(function() {
     e.preventDefault();
     this.classList.toggle("is-active");
     mobileMenu.classList.toggle("mobile-menu_opened");
-    body.classList.toggle("fixed");
+    body.classList.toggle("lock-scroll");
   };
 
   // /Мобильное меню

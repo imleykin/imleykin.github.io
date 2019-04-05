@@ -1,11 +1,37 @@
+$hamburger-padding-x           : 0px
+$hamburger-padding-y           : 0px
+$hamburger-layer-width         : 40px
+$hamburger-layer-height        : 4px
+$hamburger-layer-spacing       : 6px
+$hamburger-layer-color         : #000
+$hamburger-layer-border-radius : 4px
+$hamburger-hover-opacity       : 0.7
+// $hamburger-active-layer-color  : $hamburger-layer-color
+// $hamburger-active-hover-opacity: $hamburger-hover-opacity
+
+
 @import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers'
+
+
 
 .header-mobile
   display: none
-  height: 58px
-  transform: translate3d(0, 0, 0)
-  transition: transform .4s ease
+  margin-bottom: 15px
+  // padding: 10px 0
+  // transform: translate3d(0, 0, 0)
+  // transition: transform .4s ease
   &.header-mobile_menu-opened
     transform: translate3d(280px, 0, 0)
   @include media-breakpoint-down(md)
     display: block
+  &__wrap
+    height: 58px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    // padding-top: 15px
+    // padding-bottom: 15px
+  &__logo
+    height: 40px
+    width: auto
+  &__personal
