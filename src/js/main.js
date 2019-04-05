@@ -79,6 +79,7 @@ $(document).ready(function() {
 
   mobileMenuToggleButton.onclick = function(e) {
     e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
     this.classList.toggle("is-active");
     mobileMenu.classList.toggle("mobile-menu_opened");
     body.classList.toggle("lock-scroll");

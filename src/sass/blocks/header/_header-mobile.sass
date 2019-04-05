@@ -1,7 +1,7 @@
 $hamburger-padding-x           : 0px
 $hamburger-padding-y           : 0px
-$hamburger-layer-width         : 32px
-$hamburger-layer-height        : 3px
+$hamburger-layer-width         : 29.5px
+$hamburger-layer-height        : 2px
 $hamburger-layer-spacing       : 6px
 $hamburger-layer-color         : #000
 $hamburger-layer-border-radius : 4px
@@ -26,12 +26,38 @@ $hamburger-hover-opacity       : 0.7
   @include media-breakpoint-down(md)
     display: block
   &__wrap
+    position: relative
     height: 58px
     display: flex
     justify-content: space-between
     align-items: center
+    // box-shadow: 0 5px 10px rgba(0,0,0,.2)
     // padding-top: 15px
     // padding-bottom: 15px
+    // ::before
+    //   content: ''
+    //   position: absolute
+    //   width: 100%
+    //   left: 0
+    //   height: 1.5rem
+    //   bottom: 0
+    //   box-shadow: 0 5px 10px rgba(0,0,0,.2)
+    //   z-index: 0
+  &__left-area
+    position: relative
+    z-index: 10
+  &__right-area
+    position: relative
+    z-index: 10
+  &__center-area
+    position: absolute;
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    display: flex
+    justify-content: center
+    align-items: center
   &__logo
     height: 42px
     width: auto
