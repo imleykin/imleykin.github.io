@@ -1,10 +1,12 @@
 .mobile-menu
   position: fixed
   z-index: 9999
-  top: 0
-  width: 280px
-  height: 100%
-  transform: translate3d(-280px, 0, 0)
+  top: 58px
+  // width: 280px
+  width: 100%
+  height: calc(100% - 58px)
+  transform: translate3d(-100%, 0, 0)
+  // transform: translate3d(-280px, 0, 0)
   transition: transform .4s ease
   &.mobile-menu_opened
     transform: translate3d(0, 0, 0)

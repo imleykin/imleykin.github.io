@@ -80,7 +80,7 @@ $(document).ready(function() {
     e.preventDefault();
     this.classList.toggle("is-active");
     mobileMenu.classList.toggle("mobile-menu_opened");
-    header.classList.toggle("header-mobile_menu-opened");
+    // header.classList.toggle("header-mobile_menu-opened");
   };
 
   // /Мобильное меню
