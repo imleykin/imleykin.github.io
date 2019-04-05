@@ -3,5 +3,9 @@
 .header-mobile
   display: none
   height: 58px
+  transform: translate3d(0, 0, 0)
+  transition: transform .4s ease
+  &.header-mobile_menu-opened
+    transform: translate3d(280px, 0, 0)
   @include media-breakpoint-down(md)
     display: block

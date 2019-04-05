@@ -54,14 +54,36 @@ $(document).ready(function() {
   calculateHMSleft();
   setInterval(calculateHMSleft, 1000);
 
-  $("#main-nav").hcOffcanvasNav({
-    maxWidth: 980,
-    pushContent: $(".header"),
-    customToggle: $(".header-mobile__toggle"),
-    disableBody: false,
-    labelClose: "закрыть",
-    labelBack: "назад"
+  // $("#main-nav").hcOffcanvasNav({
+  //   maxWidth: 980,
+  //   pushContent: $(".header"),
+  //   customToggle: $(".header-mobile__toggle"),
+  //   disableBody: false,
+  //   labelClose: "закрыть",
+  //   labelBack: "назад"
+  // });
+
+  // Мобильное меню
+  var slinky = $(".mobile-menu__wrap").slinky({
+    title: true,
+    resize: false
   });
+
+  var mobileMenu = document.getElementsByClassName("mobile-menu")[0];
+  var mobileMenuToggleButton = document.getElementsByClassName(
+    "header-mobile__toggle"
+  )[0];
+
+  var header = document.getElementsByClassName("header-mobile")[0];
+
+  mobileMenuToggleButton.onclick = function(e) {
+    e.preventDefault();
+    this.classList.toggle("is-active");
+    mobileMenu.classList.toggle("mobile-menu_opened");
+    header.classList.toggle("header-mobile_menu-opened");
+  };
+
+  // /Мобильное меню
 
   $(".products-slider__trigger").owlCarousel({
     loop: false,

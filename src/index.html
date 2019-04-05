@@ -14,7 +14,8 @@
     />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="js/hc-offcanvas-nav.js"></script>
+    <!-- <script src="js/hc-offcanvas-nav.js"></script> -->
+    <script src="js/slinky.min.js"></script>
     <script src="js/main.js?ver=1.0"></script>
     <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
     <link rel="stylesheet" href="css/style.css?ver=1.1" />
@@ -174,16 +175,16 @@
           <div class="header-mobile__wrap">
             <div class="header-mobile__left-area">
               <!-- <a class="toggle hc-nav-trigger hc-nav-1"></a> -->
-              <a href="" class="header-mobile__toggle">
-                <span class=""></span>
-                <!--
-                  <button class="hamburger hamburger--collapse" type="button">
-                    <span class="hamburger-box">
-                      <span class="hamburger-inner"></span>
-                    </span>
-                  </button>
-                -->
-              </a>
+              <!-- <a href="" class="header-mobile__toggle"> -->
+              <button
+                class="header-mobile__toggle hamburger hamburger--collapse"
+                type="button"
+              >
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+              <!-- </a> -->
             </div>
           </div>
         </div>
@@ -2096,26 +2097,140 @@
       </div>
     </footer>
 
-    <nav id="main-nav" style="display:none">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li>
-          <a href="#">Services</a>
-          <ul>
-            <li>
-              <a href="#">Hosting</a>
-              <ul>
-                <li><a href="#">Private Server</a></li>
-                <li><a href="#">Managed Hosting</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Domains</a></li>
-            <li><a href="#">Websites</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-mobile__menu mobile-menu">
+      <div class="mobile-menu__wrap">
+        <ul>
+          <li><a href="#">Каталог</a></li>
+          <li>
+            <a href="#">Товары для животных</a>
+            <ul>
+              <li>
+                <a href="#">Для кошек</a>
+                <ul>
+                  <li><a href="#">Влажный корм</a></li>
+                  <li><a href="#">Сухой корм</a></li>
+                  <li><a href="#">Корм в больших упаковках</a></li>
+                  <li><a href="#">Лакомства</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Для собак</a>
+                <ul>
+                  <li><a href="#">Влажный корм</a></li>
+                  <li><a href="#">Сухой корм</a></li>
+                  <li><a href="#">Корм в больших упаковках</a></li>
+                  <li><a href="#">Лакомства</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Для грызунов</a>
+                <ul>
+                  <li><a href="#">Аксессуары</a></li>
+                  <li><a href="#">Корма</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Красота, гигиена, бытовая химия</a>
+            <ul>
+              <li>
+                <a href="#">Уход за кожей</a>
+                <ul>
+                  <li><a href="#">Средства для лица</a></li>
+                  <li><a href="#">Средства для рук</a></li>
+                  <li><a href="#">Средства для тела</a></li>
+                  <li><a href="#">Средства для ног</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Уход за волосами</a>
+                <ul>
+                  <li>
+                    <a href="#">Шампуни и средства для ухода после мытья</a>
+                  </li>
+                  <li><a href="#">Средства для окрашивания</a></li>
+                  <li><a href="#">Средства для укладки</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Уход за полостью рта</a>
+                <ul>
+                  <li><a href="#">Зубные пасты, гели</a></li>
+                  <li><a href="#">Зубные щетки, нити, зубочистки</a></li>
+                  <li><a href="#">Ополаскиватели для рта</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Молоко, сыр, яйца</a>
+            <ul>
+              <li><a href="#">Молоко</a></li>
+              <li><a href="#">Сыры</a></li>
+              <li><a href="#">Творог, сырки</a></li>
+              <li><a href="#">Йогурты и десерты</a></li>
+              <li><a href="#">Молочные коктейли</a></li>
+              <li><a href="#">Сливки</a></li>
+              <li><a href="#">Сгущенное молоко</a></li>
+              <li><a href="#">Сметана</a></li>
+              <li><a href="#">Яйца</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Овощи, фрукты, грибы</a>
+            <ul>
+              <li>
+                <a href="#">Фрукты</a>
+                <ul>
+                  <li><a href="#">Бананы</a></li>
+                  <li><a href="#">Апельсины</a></li>
+                  <li><a href="#">Яблоки</a></li>
+                  <li><a href="#">Манго</a></li>
+                  <li><a href="#">Помело</a></li>
+                  <li><a href="#">Мандарины</a></li>
+                  <li><a href="#">Виноград</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Овощи</a>
+                <ul>
+                  <li><a href="#">Капуста</a></li>
+                  <li><a href="#">Картофель</a></li>
+                  <li><a href="#">Морковь</a></li>
+                  <li><a href="#">Лук</a></li>
+                </ul>
+              </li>
+              <li><a href="">Ягоды</a></li>
+              <li><a href="">Грибы</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Мясо, птица, деликатесы</a>
+            <ul>
+              <li><a href="#">Мясо птицы</a></li>
+              <li><a href="#">Свинина</a></li>
+              <li><a href="#">Говядина</a></li>
+              <li><a href="#">Телятина</a></li>
+              <li><a href="#">Баранина</a></li>
+              <li>
+                <a href="#">Фарш</a>
+                <ul>
+                  <li><a href="#">Говядина</a></li>
+                  <li><a href="#">Свинина</a></li>
+                  <li><a href="#">Курица</a></li>
+                  <li><a href="#">Баранина</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Колбасы, ветчина</a></li>
+              <li><a href="#">Шашлык</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Макароны, крупы, специи</a></li>
+          <li><a href="#">Хлеб, сладости, снеки</a></li>
+          <li><a href="#">Рыба и морепродукты</a></li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
