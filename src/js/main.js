@@ -42,6 +42,8 @@ $(document).ready(function() {
       "<i class='fa fa-chevron-right'></i>"
     ],
     items: 1,
+    lazyLoad: true,
+    // autoHeight: true,
     //autoWidth: true,
     autoplay: false,
     autoplayHoverPause: true,
