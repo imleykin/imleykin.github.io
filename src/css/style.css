@@ -3922,6 +3922,8 @@ button:focus {
 .banner-slider {
   position: relative;
   max-width: 884px;
+  background: #F5F5F5;
+  border-radius: 15px;
   overflow: hidden; }
   .banner-slider__item {
     max-width: 884px; }
