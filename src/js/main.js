@@ -53,21 +53,20 @@ $(document).ready(function() {
     onLoadedLazy: function() {
       mainSlider.trigger("refresh.owl.carousel");
       console.log("slider refreshed");
+    },
+    onInitialized: function(e) {
+      console.log(e.target.querySelectorAll("img")[0].complete);
+      var timerId = setInterval(function() {
+        console.log("check img");
+        if (e.target.querySelectorAll("img")[0].complete) {
+          clearInterval(timerId);
+          mainSlider.trigger("refresh.owl.carousel");
+        }
+      }, 100);
     }
-    // onInitialized: function(e) {
-    //   console.log(e.target.querySelectorAll("img")[0]);
-    //   e.target.querySelectorAll("img")[0].onload = function() {
-    //     console.log("first image loaded");
-    //   };
-    // },
-    // onInitialized: function(e) {
-    //
-    // },
-    // onRefreshed: fixOwl
-    // navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
   });
 
-  mainSlider.trigger("refresh.owl.carousel");
+  // mainSlider.trigger("refresh.owl.carousel");
 
   // mainSlider.on("loaded.owl.lazy", function() {
   //   mainSlider.trigger("refresh.owl.carousel");
@@ -136,6 +135,7 @@ $(document).ready(function() {
       $(".products-slider__trigger").trigger("refresh.owl.carousel");
       console.log("onInitialized produc slider");
     },
+
     onRefreshed: fixOwl
   });
 
