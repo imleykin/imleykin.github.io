@@ -68,6 +68,7 @@ $(document).ready(function() {
   });
 
   mainSlider.trigger("refresh.owl.carousel");
+
   // mainSlider.on("loaded.owl.lazy", function() {
   //   mainSlider.trigger("refresh.owl.carousel");
   //   console.log("slider refreshed");
@@ -131,9 +132,14 @@ $(document).ready(function() {
         items: 4
       }
     },
-    onInitialized: fixOwl,
+    onInitialized: function() {
+      $(".products-slider__trigger").trigger("refresh.owl.carousel");
+      console.log("onInitialized produc slider");
+    },
     onRefreshed: fixOwl
   });
+
+  $(".products-slider__trigger").trigger("refresh.owl.carousel");
 
   $(".brands-slider__trigger").owlCarousel({
     loop: false,
