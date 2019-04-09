@@ -49,7 +49,11 @@ $(document).ready(function() {
     //autoWidth: true,
     autoplay: false,
     autoplayHoverPause: true,
-    margin: 3
+    margin: 3,
+    onLoadedLazy: function() {
+      mainSlider.trigger("refresh.owl.carousel");
+      console.log("slider refreshed");
+    }
     // onInitialized: function(e) {
     //   console.log(e.target.querySelectorAll("img")[0]);
     //   e.target.querySelectorAll("img")[0].onload = function() {
@@ -63,10 +67,11 @@ $(document).ready(function() {
     // navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
   });
 
-  mainSlider.on("loaded.owl.lazy", function() {
-    mainSlider.trigger("refresh.owl.carousel");
-    console.log("slider refreshed");
-  });
+  mainSlider.trigger("refresh.owl.carousel");
+  // mainSlider.on("loaded.owl.lazy", function() {
+  //   mainSlider.trigger("refresh.owl.carousel");
+  //   console.log("slider refreshed");
+  // });
   // console.log(mainSlider);
 
   calculateHMSleft();
