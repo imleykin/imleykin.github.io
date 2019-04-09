@@ -30,6 +30,8 @@ var fixOwl = function() {
   if (elW > stageW) {
     $stage.width(elW);
   }
+
+  // console.log(this);
 };
 
 $(document).ready(function() {
@@ -47,11 +49,25 @@ $(document).ready(function() {
     //autoWidth: true,
     autoplay: false,
     autoplayHoverPause: true,
-    margin: 3,
-    onInitialized: fixOwl,
-    onRefreshed: fixOwl
+    margin: 3
+    // onInitialized: function(e) {
+    //   console.log(e.target.querySelectorAll("img")[0]);
+    //   e.target.querySelectorAll("img")[0].onload = function() {
+    //     console.log("first image loaded");
+    //   };
+    // },
+    // onInitialized: function(e) {
+    //
+    // },
+    // onRefreshed: fixOwl
     // navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
   });
+
+  mainSlider.on("loaded.owl.lazy", function() {
+    mainSlider.trigger("refresh.owl.carousel");
+    console.log("slider refreshed");
+  });
+  // console.log(mainSlider);
 
   calculateHMSleft();
   setInterval(calculateHMSleft, 1000);
@@ -167,7 +183,7 @@ $(document).ready(function() {
     onRefreshed: fixOwl
   });
 
-  setTimeout(function() {
-    $(".owl-carousel").trigger("refresh.owl.carousel");
-  }, 3000);
+  // setTimeout(function() {
+  //   $(".owl-carousel").trigger("refresh.owl.carousel");
+  // }, 3000);
 });
