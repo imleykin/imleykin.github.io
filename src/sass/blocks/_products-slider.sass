@@ -1,0 +1,26 @@
+.products-slider
+  position: relative
+  .owl-prev,
+  .owl-next
+    position: absolute
+    color: #b2b2b2 !important
+    transition: .25s
+    &:hover
+      background: transparent !important
+    &:not(.disabled):hover
+      color: $orange-color !important
+
+    @include media-breakpoint-down(md)
+      display: none !important
+  .owl-prev
+    top: 0
+    left: -35px
+    height: 100%
+    @include media-breakpoint-down(lg)
+      left: -10px
+  .owl-next
+    top: 0
+    right: -35px
+    height: 100%
+    @include media-breakpoint-down(lg)
+      right: -10px

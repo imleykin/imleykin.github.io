@@ -40,11 +40,37 @@
                 </li>
               </ul>
 
+              <div class="top-bar__center-area">
+                <!--
+                  <div class="header-work-time">
+                    <svg class="icon icon-clocks header-work-time__icon">
+                      <use xlink:href="svg/sprite/sprite.svg#clocks"></use>
+                    </svg>
+                    <p class="header-work-time__text">
+                      Часы работы: Пн-Пт.: с 10:00 до 19:00, Сб-Вс.: с 10:00 до
+                      18:00
+                    </p>
+                  </div>
+                -->
+              </div>
+
               <div class="top-bar__right">
+                <div class="top-bar__work-time header-work-time">
+                  <svg class="icon icon-clocks header-work-time__icon">
+                    <use xlink:href="svg/sprite/sprite.svg#clocks"></use>
+                  </svg>
+                  <p class="header-work-time__text">
+                    Пн-Пт.: с 10:00 до 19:00, Сб-Вс.: с 10:00 до 18:00
+                  </p>
+                </div>
+
                 <a
                   href="tel:+7 (351) 262-20-01"
-                  class="link top-bar__phone-number"
+                  class="link top-bar__phone-number header-phone"
                 >
+                  <svg class="icon icon-phone header-phone__icon">
+                    <use xlink:href="svg/sprite/sprite.svg#phone"></use>
+                  </svg>
                   +7 (351) 262-20-05
                 </a>
               </div>
@@ -80,13 +106,20 @@
                     type="submit"
                     class="products-search__submit"
                   >
-                    <span class="icon i-search"></span>
+                    <!-- <span class="icon i-search"></span> -->
+                    <svg class="icon icon-search">
+                      <use xlink:href="svg/sprite/sprite.svg#search"></use>
+                    </svg>
                   </button>
                 </form>
               </div>
 
               <div class="header-main-area__login header-login">
-                <span class="icon i-user header-login__icon"></span>
+                <!-- <span class="icon i-user header-login__icon"></span> -->
+                <svg class="icon icon-user header-login__icon">
+                  <use xlink:href="svg/sprite/sprite.svg#user"></use>
+                </svg>
+
                 <div class="header-login__links">
                   <a
                     href=""
@@ -104,15 +137,37 @@
               </div>
 
               <div class="header-desktop__personal personal-section">
-                <div class="personal-section__item personal-section__compare">
-                  <span class="icon i-header-compare"></span>
-                </div>
-                <div class="personal-section__item personal-section__favorite">
-                  <span class="icon i-header-favorite"></span>
-                </div>
-                <div class="personal-section__item personal-section__cart">
-                  <span class="icon i-header-cart"></span>
-                </div>
+                <a
+                  href="#"
+                  class="personal-section__item personal-section__compare"
+                >
+                  <svg class="icon icon-header-compare">
+                    <use
+                      xlink:href="svg/sprite/sprite.svg#header-compare"
+                    ></use>
+                  </svg>
+                  <p class="personal-section__item-count">10</p>
+                </a>
+                <a
+                  href="#"
+                  class="personal-section__item personal-section__favorite"
+                >
+                  <svg class="icon icon-header-favorite">
+                    <use
+                      xlink:href="svg/sprite/sprite.svg#header-favorite"
+                    ></use>
+                  </svg>
+                  <p class="personal-section__item-count">10</p>
+                </a>
+                <a
+                  href="#"
+                  class="personal-section__item personal-section__cart"
+                >
+                  <svg class="icon icon-header-cart">
+                    <use xlink:href="svg/sprite/sprite.svg#header-cart"></use>
+                  </svg>
+                  <p class="personal-section__item-count">10</p>
+                </a>
               </div>
             </div>
           </div>
@@ -124,9 +179,14 @@
               <li class="catalog-menu__item">
                 <a href="" class="catalog-menu__item-link">
                   Компьютеры и Комплектующие
-                  <span
-                    class="icon i-arrow-down catalog-menu__item-arrow"
-                  ></span>
+                  <!--
+                    <span
+                      class="icon i-arrow-down catalog-menu__item-arrow"
+                    ></span>
+                  -->
+                  <svg class="icon icon-arrow-down catalog-menu__item-arrow">
+                    <use xlink:href="svg/sprite/sprite.svg#arrow-down"></use>
+                  </svg>
                 </a>
                 <div class="catalog-menu__submenu">
                   <div class="catalog-menu__submenu-images"></div>
@@ -476,32 +536,45 @@
                 <a
                   href="#"
                   class="product-item__to-compare-button product-item__control"
-                  ><span class="icon i-item-compare"></span>
+                >
+                  <!-- <span class="icon i-item-compare"></span> -->
+                  <svg class="icon icon-item-compare">
+                    <use xlink:href="svg/sprite/sprite.svg#item-compare"></use>
+                  </svg>
                 </a>
                 <a
                   href="#"
                   class="product-item__to-favorite-button product-item__control"
-                  ><span class="icon i-item-favorite"></span>
+                >
+                  <!-- <span class="icon i-item-favorite"></span> -->
+                  <svg class="icon icon-item-favorite">
+                    <use xlink:href="svg/sprite/sprite.svg#item-favorite"></use>
+                  </svg>
                 </a>
                 <a
                   href="#"
                   class="product-item__to-cart-button product-item__control product-item__control_to-cart"
                 >
                   + В корзину
-                  <span
-                    class="icon i-item-cart product-item__icon-to-cart"
-                  ></span>
+                  <!--
+                    <span
+                      class="icon i-item-cart product-item__icon-to-cart"
+                    ></span>
+                  -->
+                  <svg class="icon icon-item-cart">
+                    <use xlink:href="svg/sprite/sprite.svg#item-cart"></use>
+                  </svg>
                 </a>
 
                 <a
                   href="#"
-                  class="product-item__to-cart-button product-item__control product-item__control_to-cart addded"
+                  class="product-item__to-cart-button product-item__control product-item__control_to-cart added"
                   style="display: none"
                 >
                   + В корзине
-                  <span
-                    class="icon i-item-cart product-item__icon-to-cart"
-                  ></span>
+                  <svg class="icon icon-item-cart">
+                    <use xlink:href="svg/sprite/sprite.svg#item-cart"></use>
+                  </svg>
                 </a>
               </div>
             </div>
@@ -509,57 +582,59 @@
         </div>
       </div>
 
-      <div class="page-main__advantages main-advantages">
-        <div class="main-wrapper">
-          <div class="main-advantages-wrap">
-            <div class="main-advantages__item">
-              <span
-                class="icon i-advantage-staff main-advantages__item-icon"
-              ></span>
-              <p class="main-advantages__item-text">
-                Индивидуальный <br />
-                подход к клиентам
-              </p>
-            </div>
-            <div class="main-advantages__item">
-              <span
-                class="icon i-advantage-warranty main-advantages__item-icon"
-              ></span>
-              <p class="main-advantages__item-text">
-                Гарантия <br />
-                лучшей цены
-              </p>
-            </div>
-            <div class="main-advantages__item">
-              <span
-                class="icon i-advantage-delivery main-advantages__item-icon"
-              ></span>
-              <p class="main-advantages__item-text">
-                Быстрая и бережная <br />
-                доставка
-              </p>
-            </div>
-            <div class="main-advantages__item">
-              <span
-                class="icon i-advantage-choice main-advantages__item-icon"
-              ></span>
-              <p class="main-advantages__item-text">
-                Огромный <br />
-                выбор товаров
-              </p>
-            </div>
-            <div class="main-advantages__item">
-              <span
-                class="icon i-advantage-gift main-advantages__item-icon"
-              ></span>
-              <p class="main-advantages__item-text">
-                Закажи на сайте, <br />
-                забери через 30 минут
-              </p>
+      <!--
+        <div class="page-main__advantages main-advantages">
+          <div class="main-wrapper">
+            <div class="main-advantages-wrap">
+              <div class="main-advantages__item">
+                <span
+                  class="icon i-advantage-staff main-advantages__item-icon"
+                ></span>
+                <p class="main-advantages__item-text">
+                  Индивидуальный <br />
+                  подход к клиентам
+                </p>
+              </div>
+              <div class="main-advantages__item">
+                <span
+                  class="icon i-advantage-warranty main-advantages__item-icon"
+                ></span>
+                <p class="main-advantages__item-text">
+                  Гарантия <br />
+                  лучшей цены
+                </p>
+              </div>
+              <div class="main-advantages__item">
+                <span
+                  class="icon i-advantage-delivery main-advantages__item-icon"
+                ></span>
+                <p class="main-advantages__item-text">
+                  Быстрая и бережная <br />
+                  доставка
+                </p>
+              </div>
+              <div class="main-advantages__item">
+                <span
+                  class="icon i-advantage-choice main-advantages__item-icon"
+                ></span>
+                <p class="main-advantages__item-text">
+                  Огромный <br />
+                  выбор товаров
+                </p>
+              </div>
+              <div class="main-advantages__item">
+                <span
+                  class="icon i-advantage-gift main-advantages__item-icon"
+                ></span>
+                <p class="main-advantages__item-text">
+                  Закажи на сайте, <br />
+                  забери через 30 минут
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      -->
 
       <div class="page-main__categories main-categories">
         <div class="main-wrapper">
@@ -632,11 +707,13 @@
             </div>
           </div>
 
-          <div class="main-categories__to-catalog">
-            <a href="#" class="btn">
-              Перейти в каталог <span class="icon i-ifort-arrow-black"></span>
-            </a>
-          </div>
+          <!--
+            <div class="main-categories__to-catalog">
+              <a href="#" class="btn">
+                Перейти в каталог <span class="icon i-ifort-arrow-black"></span>
+              </a>
+            </div>
+          -->
         </div>
       </div>
 
@@ -2144,21 +2221,38 @@
             </div>
             <div class="footer__contacts footer-contacts">
               <div class="footer-contacts__contact">
-                <span class="icon i-city footer-contacts__contact-icon"></span>
+                <!--
+                  <span class="icon i-city footer-contacts__contact-icon"></span>
+                -->
+                <svg class="icon icon-city footer-contacts__contact-icon">
+                  <use xlink:href="svg/sprite/sprite.svg#city"></use>
+                </svg>
                 <p class="footer-contacts__contact-text">
                   Челябинск, ул. Энтузиастов, 21
                 </p>
               </div>
               <div class="footer-contacts__contact">
-                <span class="icon i-city footer-contacts__contact-icon"></span>
+                <!--
+                  <span class="icon i-city footer-contacts__contact-icon"></span>
+                -->
+                <svg class="icon icon-clocks2 footer-contacts__contact-icon">
+                  <use xlink:href="svg/sprite/sprite.svg#clocks2"></use>
+                </svg>
                 <p class="footer-contacts__contact-text">
                   Часы работы: <br />
                   Пн-Пт.: с 10:00 до 19:00 <br />
                   Сб-Вс.: с 10:00 до 18:00
                 </p>
               </div>
-              <div class="footer-contacts__contact">
-                <span class="icon i-city footer-contacts__contact-icon"></span>
+              <div
+                class="footer-contacts__contact footer-contacts__contact_centered"
+              >
+                <!--
+                  <span class="icon i-city footer-contacts__contact-icon"></span>
+                -->
+                <svg class="icon icon-envelope footer-contacts__contact-icon">
+                  <use xlink:href="svg/sprite/sprite.svg#envelope"></use>
+                </svg>
                 <p class="footer-contacts__contact-text">info@site.ru</p>
               </div>
             </div>
@@ -2260,10 +2354,40 @@
               </form>
             </div>
 
-            <div class="footer__phone footer-phone">
-              <a href="tel:+7 (351) 262-20-01" class="footer-phone__link">
-                +7 (351) 262-20-05
-              </a>
+            <div class="footer__right-area-aligner">
+              <div class="footer__phone footer-phone">
+                <a href="tel:+7 (351) 262-20-01" class="footer-phone__link">
+                  +7 (351) 262-20-05
+                </a>
+              </div>
+
+              <div class="footer__social footer-social">
+                <p class="footer-social__title">Мы в социальных сетях:</p>
+                <div class="footer-social__links">
+                  <a href="http://vk.com/ifort" class="footer-social__link">
+                    <svg class="icon icon-vk footer-social__icon">
+                      <use xlink:href="svg/sprite/sprite.svg#vk"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="footer__payment footer-payment">
+                <p class="footer-payment__title">Мы принимаем к оплате:</p>
+                <div class="footer-payment__items">
+                  <svg class="icon icon-card-visa footer-payment__item">
+                    <use xlink:href="svg/sprite/sprite.svg#card-visa"></use>
+                  </svg>
+
+                  <svg class="icon icon-card-mastercard footer-payment__item">
+                    <use xlink:href="svg/sprite/sprite.svg#mastercard"></use>
+                  </svg>
+
+                  <svg class="icon icon-card-mir footer-payment__item">
+                    <use xlink:href="svg/sprite/sprite.svg#card-mir"></use>
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </div>

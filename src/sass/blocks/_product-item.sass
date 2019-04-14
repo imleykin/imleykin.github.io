@@ -78,15 +78,27 @@
     border: 1px solid #EEEEEE
     border-left: 0
     border-bottom: 0
+    stroke: #b9b9b9
+    &:hover,
+    &.added
+      stroke: $orange-color
     &_to-cart
       color: #fff
       background: $orange-color
       flex-grow: 1
       border-right: 0
-      &:hover
+      stroke: #fff
+      &:hover,
+      &.added
         color: $primary-color
+        stroke: $primary-color
         background: linear-gradient(350.68deg, #FFC700 12.56%, #FFE300 72.49%)
-  &__icon-to-cart
+  .icon-item-compare
+    font-size: 18px
+  .icon-item-favorite
+    font-size: 17px
+  .icon-item-cart
+    font-size: 21px
     margin-left: 7px
   &__product-details
     margin-top: auto

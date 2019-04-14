@@ -23,15 +23,22 @@
 
   &__right-area
     order: 3
-    text-align: right
+    // text-align: right
+    display: flex
+    flex-direction: column
+    align-items: flex-end
     @include make-col-ready()
     @include make-col(3.5)
     @include media-breakpoint-down(md)
         @include make-col(6)
     @include media-breakpoint-down(sm)
         @include make-col(12)
-        text-align: left
+        align-items: flex-start
         margin-top: 10px
+  &__search
+    width: 100%
+  &__right-area-aligner
+    display: inline-block
   &__logo
     margin-bottom: 45px
   &__contacts
@@ -41,10 +48,27 @@
 
 .footer-contacts
   &__contact
+    // &.footer-contacts__contact_centered
+    //   display: flex
+    //   align-items: center
+    //   justify-content: center
+    //   position: static
+    //   .footer-contacts__contact-icon
+    //     float: none
+    //   .footer-contacts__contact-text
+    //     padding: 0
   &__contact-icon
     float: left
     position: relative
-    top: -3px
+    // top: -3px
+    &.icon-city
+      font-size: 20px
+    &.icon-clocks2
+      font-size: 19px
+    &.icon-envelope
+      font-size: 13px
+      position: relative
+      top: 2px
   &__contact-text
     padding-left: 30px
 
@@ -78,6 +102,27 @@
   &__link
     font-weight: bold
     font-size: 20px
+
+.footer-social
+  &__icon
+    font-size: 35px
+
+.footer-payment
+  display: flex
+  flex-direction: column
+  // align-items: flex-end
+  // @include media-breakpoint-down(sm)
+  //   align-items: flex-start
+  &__items
+    display: inline-flex
+    align-items: center
+    justify-content: space-between
+    max-width: 220px
+    width: 100%
+  &__item
+    font-size: 20px
+    &.icon-card-mastercard
+      font-size: 50px
 
 .footer-copyright
   display: flex

@@ -117,6 +117,11 @@ $(document).ready(function() {
     dots: false,
     autoplayHoverPause: true,
     margin: 33,
+    navText: [
+      "<svg class='icon icon-arrow-left'><use xlink:href='svg/sprite/sprite.svg#arrow-left'></use></svg>",
+      "<svg class='icon icon-arrow-right'><use xlink:href='svg/sprite/sprite.svg#arrow-right'></use></svg>"
+    ],
+    nav: true,
     responsive: {
       0: {
         items: 1

@@ -17,6 +17,39 @@
   display: flex
   align-items: center
   justify-content: space-between
+  &__item
+    position: relative
+    padding-right: 9px
+    stroke: #000
+    fill: #000
+    font-size: 24px
+    display: flex
+    justify-content: center
+    align-items: center
+    &-count
+      width: 23px
+      height: 23px
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: $orange-color
+      color: #fff
+      font-weight: bold
+      font-size: 11px
+      position: absolute
+      top: -9px
+      right: -9px
+      margin: 0
+      border-radius: 50%
+    &:hover
+      stroke: $orange-color
+      fill: $orange-color
+    .icon-header-compare
+      font-size: 23px
+    .icon-header-favorite
+      font-size: 21px
+    .icon-header-cart
+      font-size: 25px
 
 // Панель с телефоном
 .top-bar
@@ -35,8 +68,26 @@
     margin-right: 30px
     &__menu-item-link
       color: #454545
-  &__phone-number
-    color: #454545
+  &__right
+    display: flex
+  &__work-time
+    margin-right: 15px
+
+.header-work-time
+  display: flex
+  align-items: center
+  &__icon
+    font-size: 16px
+    margin-right: 6px
+
+.header-phone
+  display: flex
+  align-items: center
+  &__icon
+    font-size: 17px
+    margin-right: 6px
+    fill: $orange-color
+
 
 // Главный блок с логотипом и поиском
 .header-main-area
@@ -68,8 +119,13 @@
     width: 100%
     height: 52px
     color: #A0A0A0
+    &:focus + .products-search__submit .icon-search
+      stroke: $orange-color
   &__submit
     position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
     height: 52px
     width: 60px
     background: transparent
@@ -77,6 +133,12 @@
     top: 0
     right: 0
     cursor: pointer
+    &:hover .icon-search
+      stroke: $orange-color
+    .icon-search
+      stroke: #A0A0A0
+      font-size: 26px
+
 
 // Вход и регистрация
 .header-login
@@ -86,12 +148,12 @@
     content: ''
     width: 0
     height: 27px
-    border: 1px solid #B4B4B4
+    border: 0.1px solid #B4B4B4
     margin: 0 40px
     @media(max-width: 1199px)
       margin: 0 25px
   &__icon
-    font-size: 11px
+    font-size: 26px
   &__links
     margin-left: 10px
   &__link
@@ -100,11 +162,9 @@
     &:hover
       text-decoration: underline
   &__sign-in:hover
-    color: $primary-color
+    // color: $primary-color
   &__sign-up
-    color: $orange-color
-
-
+    // color: $orange-color
 
 
 // Меню каталога
@@ -132,6 +192,7 @@
     transition: none
   &__item-arrow
     margin-left: 8px
+    font-size: 6px
   &__submenu
     z-index: 100
     opacity: 0
