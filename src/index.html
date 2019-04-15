@@ -231,6 +231,53 @@
       </div>
 
       <div class="header-mobile">
+        <div class="header-mobile__personal mobile-personal-section">
+          <div class="main-wrapper">
+            <div class="mobile-personal-section__wrap">
+              <a href="#" class="mobile-personal-section__item">
+                <svg
+                  class="icon icon-header-cart mobile-personal-section__icon-cart"
+                >
+                  <use xlink:href="svg/sprite/sprite.svg#header-cart"></use>
+                </svg>
+                <p class="mobile-personal-section__item-count">10</p>
+              </a>
+
+              <a href="#" class="mobile-personal-section__item">
+                <svg
+                  class="icon icon-header-compare mobile-personal-section__icon-compare"
+                >
+                  <use xlink:href="svg/sprite/sprite.svg#header-compare"></use>
+                </svg>
+                <p class="mobile-personal-section__item-count">10</p>
+              </a>
+
+              <a href="#" class="mobile-personal-section__item">
+                <svg
+                  class="icon icon-header-favorite mobile-personal-section__icon-favorite"
+                >
+                  <use xlink:href="svg/sprite/sprite.svg#header-favorite"></use>
+                </svg>
+                <p class="mobile-personal-section__item-count">10</p>
+              </a>
+
+              <a href="#" class="mobile-personal-section__item">
+                <svg
+                  class="icon icon-phone-mobile mobile-personal-section__icon-phone"
+                >
+                  <use xlink:href="svg/sprite/sprite.svg#phone-mobile"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="mobile-personal-section__item">
+                <svg class="icon icon-user  mobile-personal-section__icon-user">
+                  <use xlink:href="svg/sprite/sprite.svg#user"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div class="main-wrapper">
           <div class="header-mobile__wrap">
             <div class="header-mobile__left-area">
@@ -245,19 +292,21 @@
             </div>
 
             <div class="header-mobile__center-area">
-              <img
-                src="images/logo.svg"
-                class="header-mobile__logo"
-                alt="logo"
-              />
+              <a href="/" class="header-mobile__to-main-link">
+                <img
+                  src="images/logo.svg"
+                  class="header-mobile__logo"
+                  alt="logo"
+                />
+              </a>
             </div>
 
             <div class="header-mobile__right-area">
-              <div class="header-mobile__personal personal-section">
-                <div class="personal-section__item personal-section__cart">
-                  <span class="icon i-header-cart"></span>
-                </div>
-              </div>
+              <a href="#" class="header-mobile__search">
+                <svg class="icon icon-search header-mobile__search-icon">
+                  <use xlink:href="svg/sprite/sprite.svg#search"></use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -2220,6 +2269,12 @@
               </a>
             </div>
             <div class="footer__contacts footer-contacts">
+              <div class="footer__phone footer-phone">
+                <a href="tel:+7 (351) 262-20-01" class="footer-phone__link">
+                  +7 (351) 262-20-05
+                </a>
+              </div>
+
               <div class="footer-contacts__contact">
                 <!--
                   <span class="icon i-city footer-contacts__contact-icon"></span>
@@ -2232,9 +2287,6 @@
                 </p>
               </div>
               <div class="footer-contacts__contact">
-                <!--
-                  <span class="icon i-city footer-contacts__contact-icon"></span>
-                -->
                 <svg class="icon icon-clocks2 footer-contacts__contact-icon">
                   <use xlink:href="svg/sprite/sprite.svg#clocks2"></use>
                 </svg>
@@ -2247,9 +2299,6 @@
               <div
                 class="footer-contacts__contact footer-contacts__contact_centered"
               >
-                <!--
-                  <span class="icon i-city footer-contacts__contact-icon"></span>
-                -->
                 <svg class="icon icon-envelope footer-contacts__contact-icon">
                   <use xlink:href="svg/sprite/sprite.svg#envelope"></use>
                 </svg>
@@ -2355,11 +2404,7 @@
             </div>
 
             <div class="footer__right-area-aligner">
-              <div class="footer__phone footer-phone">
-                <a href="tel:+7 (351) 262-20-01" class="footer-phone__link">
-                  +7 (351) 262-20-05
-                </a>
-              </div>
+              <!---->
 
               <div class="footer__social footer-social">
                 <p class="footer-social__title">Мы в социальных сетях:</p>

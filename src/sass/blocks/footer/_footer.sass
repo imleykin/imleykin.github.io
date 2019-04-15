@@ -43,6 +43,8 @@
     margin-bottom: 45px
   &__contacts
   &__copyright-area
+  &__social
+    margin: 35px 0 25px 0
 
 
 
@@ -104,25 +106,36 @@
     font-size: 20px
 
 .footer-social
+  &__links
+    display: flex
+    align-items: center
   &__icon
-    font-size: 35px
+    font-size: 32px
+  &__title
+    margin: 5px 0
 
 .footer-payment
   display: flex
   flex-direction: column
+  margin-top: 10px
   // align-items: flex-end
   // @include media-breakpoint-down(sm)
   //   align-items: flex-start
+  &__title
+    margin: 0
   &__items
     display: inline-flex
     align-items: center
     justify-content: space-between
-    max-width: 220px
-    width: 100%
+    width: 220px
   &__item
     font-size: 20px
+    &.icon-card-visa
+      font-size: 20px
     &.icon-card-mastercard
-      font-size: 50px
+      font-size: 46px
+    &.icon-card-mir
+      font-size: 18px
 
 .footer-copyright
   display: flex
