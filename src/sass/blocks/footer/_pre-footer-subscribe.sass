@@ -12,6 +12,9 @@
     font-size: 45px
     margin: 0
     margin-bottom: 10px
+    color: #fff
+    @include media-breakpoint-down(md)
+      font-size: 30px
   &__text
     margin: 0
     margin-bottom: 10px
@@ -22,13 +25,13 @@
     max-width: 650px
     margin: 30px auto 0 auto
   &__input
-    width: calc(100% - 2px)
-    height: 52px
-    color: #A0A0A0
-    border: 0
-    border-radius: 15px
-    padding: 5px 30px
-    outline: none
+    width: calc(100% - 2px) !important
+    height: 52px !important
+    color: #A0A0A0 !important
+    border: 0 !important
+    border-radius: 15px !important
+    padding: 5px 30px !important
+    outline: none !important
   &__submit
     position: absolute
     top: 0
