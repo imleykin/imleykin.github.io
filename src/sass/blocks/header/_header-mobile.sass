@@ -82,21 +82,29 @@ $hamburger-hover-opacity       : 1
     &__item
       position: relative
       stroke: #fff
-    &__item-count
-      width: 19px
-      height: 19px
-      display: flex
-      justify-content: center
-      align-items: center
-      background-color: #fff
-      color: $orange-color
-      font-weight: bold
-      font-size: 10px
-      position: absolute
-      top: -3px
-      right: -12px
-      margin: 0
-      border-radius: 50%
+      &_counter
+        &.empty
+          opacity: 0.7
+          padding-right: 0
+          cursor: default
+          &:after
+            display: none
+        &:after
+          content: attr(data-count)
+          width: 19px
+          height: 19px
+          display: flex
+          justify-content: center
+          align-items: center
+          background-color: #fff
+          color: $orange-color
+          font-weight: bold
+          font-size: 10px
+          position: absolute
+          top: -3px
+          right: -12px
+          margin: 0
+          border-radius: 50%
     &__icon
       &-cart
         font-size: 29px

@@ -139,6 +139,7 @@
               <div class="header-desktop__personal personal-section">
                 <a
                   href="#"
+                  data-count="10"
                   class="personal-section__item personal-section__compare"
                 >
                   <svg class="icon icon-header-compare">
@@ -146,10 +147,10 @@
                       xlink:href="svg/sprite/sprite.svg#header-compare"
                     ></use>
                   </svg>
-                  <p class="personal-section__item-count">10</p>
                 </a>
                 <a
                   href="#"
+                  data-count="18"
                   class="personal-section__item personal-section__favorite"
                 >
                   <svg class="icon icon-header-favorite">
@@ -157,16 +158,16 @@
                       xlink:href="svg/sprite/sprite.svg#header-favorite"
                     ></use>
                   </svg>
-                  <p class="personal-section__item-count">10</p>
+                  <!-- <p class="personal-section__item-count">10</p> -->
                 </a>
                 <a
                   href="#"
+                  data-count="5"
                   class="personal-section__item personal-section__cart"
                 >
                   <svg class="icon icon-header-cart">
                     <use xlink:href="svg/sprite/sprite.svg#header-cart"></use>
                   </svg>
-                  <p class="personal-section__item-count">10</p>
                 </a>
               </div>
             </div>
@@ -175,55 +176,92 @@
 
         <nav class="header-desktop__catalog-menu catalog-menu">
           <div class="main-wrapper">
-            <ul class="catalog-menu-wrap">
-              <li class="catalog-menu__item">
-                <a href="" class="catalog-menu__item-link">
+            <ul class="catalog-menu__wrap">
+              <li class="catalog-menu__item catalog-menu-item">
+                <a href="" class="catalog-menu-item__link">
                   Компьютеры и Комплектующие
-                  <!--
-                    <span
-                      class="icon i-arrow-down catalog-menu__item-arrow"
-                    ></span>
-                  -->
-                  <svg class="icon icon-arrow-down catalog-menu__item-arrow">
+                  <svg class="icon icon-arrow-down catalog-menu-item__arrow">
                     <use xlink:href="svg/sprite/sprite.svg#arrow-down"></use>
                   </svg>
                 </a>
                 <div class="catalog-menu__submenu">
-                  <div class="catalog-menu__submenu-images"></div>
+                  <div
+                    class="catalog-menu__submenu-images catalog-submenu-images"
+                  >
+                    <div class="catalog-submenu-images__image-wrap">
+                      <img
+                        src="images/catalog-image.png"
+                        alt=""
+                        class="catalog-submenu-images__image"
+                      />
+                    </div>
+
+                    <div class="catalog-submenu-images__image-wrap">
+                      <img
+                        src="images/catalog-image.png"
+                        alt=""
+                        class="catalog-submenu-images__image"
+                      />
+                    </div>
+                  </div>
                   <div class="catalog-menu__submenu-sections">
-                    <ul class="catalog-menu__submenu-section submenu-section">
+                    <ul
+                      class="catalog-menu__submenu-section catalog-submenu-section"
+                    >
                       <li
-                        class="submenu-section__item submenu-section__item--title"
+                        class="catalog-submenu-section__item catalog-submenu-section__item--title"
                       >
                         <a href="#">Комплектующие</a>
                       </li>
-                      <li class="submenu-section__item">
+                      <li class="catalog-submenu-section__item">
                         <a href="#">Корпуса и блоки питания к ним</a>
                       </li>
-                      <li class="submenu-section__item">
+                      <li class="catalog-submenu-section__item">
                         <a href="#">Корпуса и блоки питания к ним</a>
                       </li>
-                      <li class="submenu-section__item">
+                      <li class="catalog-submenu-section__item">
                         <a href="#">Корпуса и блоки питания к ним</a>
                       </li>
-                      <li class="submenu-section__item">
+                      <li class="catalog-submenu-section__item">
+                        <a href="#">Корпуса и блоки питания к ним</a>
+                      </li>
+                    </ul>
+
+                    <ul
+                      class="catalog-menu__submenu-section catalog-submenu-section"
+                    >
+                      <li
+                        class="catalog-submenu-section__item catalog-submenu-section__item--title"
+                      >
+                        <a href="#">Комплектующие</a>
+                      </li>
+                      <li class="catalog-submenu-section__item">
+                        <a href="#">Корпуса и блоки питания к ним</a>
+                      </li>
+                      <li class="catalog-submenu-section__item">
+                        <a href="#">Корпуса и блоки питания к ним</a>
+                      </li>
+                      <li class="catalog-submenu-section__item">
+                        <a href="#">Корпуса и блоки питания к ним</a>
+                      </li>
+                      <li class="catalog-submenu-section__item">
                         <a href="#">Корпуса и блоки питания к ним</a>
                       </li>
                     </ul>
                   </div>
                 </div>
               </li>
-              <li class="catalog-menu__item">
-                <a href="" class="catalog-menu__item-link"> Квадрокоптеры </a>
+              <li class="catalog-menu__item catalog-menu-item">
+                <a href="" class="catalog-menu-item__link"> Квадрокоптеры </a>
               </li>
-              <li class="catalog-menu__item">
-                <a href="" class="catalog-menu__item-link"> Смартфоны </a>
+              <li class="catalog-menu__item catalog-menu-item">
+                <a href="" class="catalog-menu-item__link"> Смартфоны </a>
               </li>
-              <li class="catalog-menu__item">
-                <a href="" class="catalog-menu__item-link"> Видео </a>
+              <li class="catalog-menu__item catalog-menu-item">
+                <a href="" class="catalog-menu-item__link"> Видео </a>
               </li>
-              <li class="catalog-menu__item">
-                <a href="" class="catalog-menu__item-link">Акции </a>
+              <li class="catalog-menu__item catalog-menu-item">
+                <a href="" class="catalog-menu-item__link">Акции </a>
               </li>
             </ul>
           </div>
@@ -234,31 +272,42 @@
         <div class="header-mobile__personal mobile-personal-section">
           <div class="main-wrapper">
             <div class="mobile-personal-section__wrap">
-              <a href="#" class="mobile-personal-section__item">
+              <a
+                href="#"
+                data-count="5"
+                class="mobile-personal-section__item mobile-personal-section__item_counter"
+              >
                 <svg
                   class="icon icon-header-cart mobile-personal-section__icon-cart"
                 >
                   <use xlink:href="svg/sprite/sprite.svg#header-cart"></use>
                 </svg>
-                <p class="mobile-personal-section__item-count">10</p>
+                <!-- <p class="mobile-personal-section__item-count">10</p> -->
               </a>
 
-              <a href="#" class="mobile-personal-section__item">
+              <a
+                href="#"
+                data-count="5"
+                class="mobile-personal-section__item mobile-personal-section__item_counter"
+              >
                 <svg
                   class="icon icon-header-compare mobile-personal-section__icon-compare"
                 >
                   <use xlink:href="svg/sprite/sprite.svg#header-compare"></use>
                 </svg>
-                <p class="mobile-personal-section__item-count">10</p>
+                <!-- <p class="mobile-personal-section__item-count">10</p> -->
               </a>
 
-              <a href="#" class="mobile-personal-section__item">
+              <a
+                href="#"
+                data-count="5"
+                class="mobile-personal-section__item mobile-personal-section__item_counter empty"
+              >
                 <svg
                   class="icon icon-header-favorite mobile-personal-section__icon-favorite"
                 >
                   <use xlink:href="svg/sprite/sprite.svg#header-favorite"></use>
                 </svg>
-                <p class="mobile-personal-section__item-count">10</p>
               </a>
 
               <a href="#" class="mobile-personal-section__item">

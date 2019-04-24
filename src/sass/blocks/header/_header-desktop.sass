@@ -26,7 +26,17 @@
     display: flex
     justify-content: center
     align-items: center
-    &-count
+    width: 36px
+    &.empty
+      stroke: grey
+      padding-right: 0
+      cursor: default
+      &:after
+        display: none
+      &:hover
+        stroke: grey
+    &:after
+      content: attr(data-count)
       width: 23px
       height: 23px
       display: flex
@@ -37,8 +47,8 @@
       font-weight: bold
       font-size: 11px
       position: absolute
-      top: -9px
-      right: -9px
+      top: -10px
+      right: -7px
       margin: 0
       border-radius: 50%
     &:hover
@@ -113,14 +123,14 @@
 
   &__input
     border: 1px solid #D7D7D7
-    box-sizing: border-box
-    padding: 12px 35px
-    border-radius: 15px
-    width: 100%
-    height: 52px
-    color: #A0A0A0
+    box-sizing: border-box !important
+    padding: 12px 35px !important
+    border-radius: 15px !important
+    width: 100% !important
+    height: 52px !important
+    color: #A0A0A0 !important
     &:focus + .products-search__submit .icon-search
-      stroke: $orange-color
+      stroke: $orange-color !important
   &__submit
     position: absolute
     display: flex
@@ -166,55 +176,3 @@
     // color: $primary-color
   &__sign-up
     // color: $orange-color
-
-
-// Меню каталога
-.catalog-menu
-  &-wrap
-    display: flex
-    justify-content: space-between
-    list-style-type: none
-    margin: 0
-    padding: 0
-    position: relative
-  &__item
-      &:hover
-        & .catalog-menu__item-link
-          color: $orange-color
-        & .catalog-menu__submenu
-          opacity: 1
-          height: auto
-          overflow: visible
-          transition: opacity .25s ease
-          padding: 20px
-  &__item-link
-    font-size: 15px
-    font-weight: 600
-    transition: none
-  &__item-arrow
-    margin-left: 8px
-    font-size: 6px
-  &__submenu
-    z-index: 100
-    opacity: 0
-    height: 0
-    overflow: hidden
-    position: absolute
-    left: 0
-    right: 0
-    box-shadow: 0 6px 12px rgba(0,0,0,.175)
-    background-clip: padding-box
-    background-color: #fff
-    &-sections
-      display: flex
-
-.submenu-section
-  width: 16.66%
-  list-style-type: none
-  margin: 0
-  padding: 0
-  &__item
-    padding: 4px 0 4px 5px
-    &--title
-      & a
-        font-weight: bold

@@ -1,0 +1,60 @@
+// Меню каталога
+.catalog-menu
+  &__wrap
+    display: flex
+    justify-content: space-between
+    list-style-type: none
+    margin: 0
+    padding: 0
+    position: relative
+  &__submenu
+    z-index: 100
+    opacity: 0
+    height: 0
+    overflow: hidden
+    position: absolute
+    left: 0
+    right: 0
+    box-shadow: 0 6px 12px rgba(0,0,0,.175)
+    background-clip: padding-box
+    background-color: #fff
+    &-sections
+      display: flex
+
+.catalog-menu-item
+  &:hover
+    & .catalog-menu-item__link
+      color: $orange-color
+    & .catalog-menu__submenu
+      opacity: 1
+      height: auto
+      overflow: visible
+      transition: opacity .25s ease
+      padding: 20px
+  &__link
+    font-size: 15px
+    font-weight: 600
+    transition: none
+  &__arrow
+    margin-left: 8px
+    font-size: 6px
+
+.catalog-submenu-section
+  width: 16.66%
+  list-style-type: none
+  margin: 0
+  padding: 0
+  &:not(:first-child)
+    border-left: 1px solid #e9eaec
+  &__item
+    padding: 4px 0 4px 5px
+    &--title
+      & a
+        font-weight: bold
+
+.catalog-submenu-images
+  display: flex
+  margin-bottom: 5px
+  &__image-wrap
+    width: 16.66%
+  &__image
