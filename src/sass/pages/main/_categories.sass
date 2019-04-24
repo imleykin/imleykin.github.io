@@ -24,6 +24,10 @@ $main-categories-gutter: 15px
         @include make-col(12)
     > .main-categories__item-sales
       background: linear-gradient(51.48deg, #FBDA61 -0.31%, #FF5ACD 91.89%)
+      .main-categories__item-image
+        background-position: bottom right
+        top: 5px
+        bottom: -1px
     &-inner
       display: block
       position: relative
@@ -31,9 +35,16 @@ $main-categories-gutter: 15px
       height: 220px
       background: #F9F9F9
       border-radius: 10px
-      transition: .5s
+      overflow: hidden
+      transition: all .5s !important
       @include media-breakpoint-down(xs)
+        display: flex
+        align-items: center
         height: auto
+        min-height: 90px
+        padding-right: 150px
+      @media(max-width: 350px)
+        padding-right: 30px
       &:hover
         color: $primary-color
         box-shadow: 0px 8px 35px rgba(0, 0, 0, 0.15)
@@ -66,8 +77,12 @@ $main-categories-gutter: 15px
       background-repeat: no-repeat
       background-size: contain
       background-position: center
-      // border: 2px solid red
       @include media-breakpoint-down(xs)
+        background-position: right
+        top: 5px
+        bottom: 5px
+        right: 5px
+      @media(max-width: 350px)
         display: none
   &__to-catalog
     text-align: center
