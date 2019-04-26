@@ -505,91 +505,89 @@
       <div class="page-main__top-area main-top-area">
         <div class="main-wrapper mobile-full-width">
           <div class="main-top-area-wrap">
-            <div class="main-top-area__slider banner-slider">
-              <!-- <div class="banner-slider-wrap"> -->
-              <div class="banner-slider__trigger owl-carousel owl-theme">
-                <!-- <?foreach($arResult["ITEMS"] as $arItem) :?> -->
-                <div class="banner-slider__item">
-                  <a href="#">
-                    <!--
-                      <img
-                        src="images/banner.jpg"
-                        class="banner-slider__image-desktop"
-                        alt="фотография баннера"
-                      />
-                    -->
-                    <picture>
-                      <source
-                        class="owl-lazy"
-                        media="(max-width: 640px)"
-                        data-srcset="images/banner-sm.png 640w"
-                      />
+            <div class="main-top-area__slider">
+              <div class="banner-slider">
+                <div class="banner-slider__trigger owl-carousel owl-theme">
+                  <div class="banner-slider__item">
+                    <a href="#">
                       <!--
-                        <source
-                          class="owl-lazy"
-                          media="(max-width: 992px)"
-                          data-srcset="images/main2-768x408-new.png"
+                        <img
+                          src="images/banner.jpg"
+                          class="banner-slider__image-desktop"
+                          alt="фотография баннера"
                         />
                       -->
-                      <img
-                        class="owl-lazy"
-                        data-src="images/banner.jpg"
-                        alt=""
-                      />
-                    </picture>
-                  </a>
-                </div>
+                      <picture>
+                        <source
+                          class="owl-lazy"
+                          media="(max-width: 640px)"
+                          data-srcset="images/banner-sm.png 640w"
+                        />
+                        <!--
+                          <source
+                            class="owl-lazy"
+                            media="(max-width: 992px)"
+                            data-srcset="images/main2-768x408-new.png"
+                          />
+                        -->
+                        <img
+                          class="owl-lazy"
+                          data-src="images/banner.jpg"
+                          alt=""
+                        />
+                      </picture>
+                    </a>
+                  </div>
 
-                <div class="banner-slider__item">
-                  <a href="#">
-                    <picture>
-                      <source
-                        class="owl-lazy"
-                        media="(max-width: 640px)"
-                        data-srcset="images/banner-sm.png"
-                      />
-                      <!--
+                  <div class="banner-slider__item">
+                    <a href="#">
+                      <picture>
                         <source
                           class="owl-lazy"
-                          media="(max-width: 992px)"
-                          data-srcset="images/main2-768x408-new.png"
+                          media="(max-width: 640px)"
+                          data-srcset="images/banner-sm.png"
                         />
-                      -->
-                      <img
-                        class="owl-lazy"
-                        data-src="images/banner.jpg"
-                        alt=""
-                      />
-                    </picture>
-                  </a>
-                </div>
+                        <!--
+                          <source
+                            class="owl-lazy"
+                            media="(max-width: 992px)"
+                            data-srcset="images/main2-768x408-new.png"
+                          />
+                        -->
+                        <img
+                          class="owl-lazy"
+                          data-src="images/banner.jpg"
+                          alt=""
+                        />
+                      </picture>
+                    </a>
+                  </div>
 
-                <div class="banner-slider__item">
-                  <a href="#">
-                    <picture>
-                      <source
-                        class="owl-lazy"
-                        media="(max-width: 640px)"
-                        data-srcset="images/banner-sm.png 640w"
-                      />
-                      <!--
+                  <div class="banner-slider__item">
+                    <a href="#">
+                      <picture>
                         <source
                           class="owl-lazy"
-                          media="(max-width: 992px)"
-                          data-srcset="images/main2-768x408-new.png"
+                          media="(max-width: 640px)"
+                          data-srcset="images/banner-sm.png 640w"
                         />
-                      -->
-                      <img
-                        class="owl-lazy"
-                        data-src="images/banner.jpg"
-                        alt=""
-                      />
-                    </picture>
-                  </a>
+                        <!--
+                          <source
+                            class="owl-lazy"
+                            media="(max-width: 992px)"
+                            data-srcset="images/main2-768x408-new.png"
+                          />
+                        -->
+                        <img
+                          class="owl-lazy"
+                          data-src="images/banner.jpg"
+                          alt=""
+                        />
+                      </picture>
+                    </a>
+                  </div>
                 </div>
-                <!-- <?endforeach;?> -->
               </div>
-              <!-- </div> -->
             </div>
             <div
               class="main-top-area__promo-day product-item product-item_shadow product-item_large"
@@ -1673,13 +1671,19 @@
         </div>
       </div>
 
-      <div class="page-main__promo-slider promo-slider">
+      <div class="page-main__promo-slider promo-sale-block">
         <div class="main-wrapper">
-          <div class="promo-slider__wrap">
-            <h2 class="title">Успейте купить</h2>
-            <div
-              class="main-hot-offers__recommended-products-slider products-slider"
-            >
+          <div class="promo-sale-block__wrap">
+            <div class="promo-sale-block__header">
+              <h2 class="title">Успейте купить</h2>
+              <a href="/" class="promo-sale-block__see-all">
+                Смотреть все
+                <svg class="icon icon-ifort-arrow">
+                  <use xlink:href="svg/sprite/sprite.svg#ifort-arrow"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="promo-sale-block__slider products-slider">
               <div class="products-slider__trigger owl-carousel owl-theme">
                 <div
                   class="products-slider__item product-item product-item_border"
