@@ -1,0 +1,54 @@
+.sales-list
+  &__title
+    margin-bottom: 40px
+  &__wrap
+    @include make-row()
+    &::after
+      content: ''
+      display: block
+      height: 1px
+      width: 100%
+      background-color: #D7D7D7
+  &__item
+    margin-bottom: 75px
+
+    @include make-col-ready()
+
+    @include make-col(4)
+
+    @include media-breakpoint-down(md)
+      @include make-col(6)
+
+    @include media-breakpoint-down(sm)
+      @include make-col(12)
+
+.sales-list-item
+  display: flex
+  flex-direction: column
+  transition: all .5s !important
+  &:hover
+    color: currentColor
+    .sales-list-item__title
+      color: $orange-color
+    .sales-list-item__image
+      box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.37)
+  &__image
+    align-self: center
+    max-width: 100%
+    height: auto
+    border-radius: 15px
+  &__date
+    font-family: "PF BeauSans Pro Bbook"
+    font-weight: 500
+    margin: 30px 0 0 0
+    color: #888888
+  &__title
+    font-weight: bold
+    font-size: 16px
+    margin: 10px 0 0 0
+  &__description
+    font-size: 16px
+    line-height: 1
+    margin: 20px 0 0 0
+    max-height: 48px
+    overflow: hidden

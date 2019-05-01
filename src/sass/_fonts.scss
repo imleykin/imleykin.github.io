@@ -43,7 +43,18 @@
   font-style: normal;
 }
 
-// /*
+@font-face {
+  font-family: "PF BeauSans Pro Bbook";
+  src: url("../fonts/PFBeauSansPro-Bbook.eot");
+  src: local("../fonts/PFBeauSansPro-Bbook"),
+    url("../fonts/PFBeauSansPro-Bbook.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/PFBeauSansPro-Bbook.woff") format("woff"),
+    url("../fonts/PFBeauSansPro-Bbook.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+//
 // @font-face {
 //   font-family: "PF BeauSans Pro";
 //   src: url("../fonts/PFBeauSansPro-LightItalic.eot");
@@ -165,16 +176,6 @@
 //     font-style: normal;
 // }
 //
-// @font-face {
-//     font-family: 'PF BeauSans Pro Bbook';
-//     src: url('../fonts/PFBeauSansPro-Bbook.eot');
-//     src: local('../fonts/PFBeauSansPro-Bbook'),
-//         url('../fonts/PFBeauSansPro-Bbook.eot?#iefix') format('embedded-opentype'),
-//         url('../fonts/PFBeauSansPro-Bbook.woff') format('woff'),
-//         url('../fonts/PFBeauSansPro-Bbook.ttf') format('truetype');
-//     font-weight: 500;
-//     font-style: normal;
-// }
 //
 // @font-face {
 //     font-family: 'PF BeauSans Pro Bbook';
@@ -185,4 +186,4 @@
 //         url('../fonts/PFBeauSansPro-BbookItalic.ttf') format('truetype');
 //     font-weight: 500;
 //     font-style: italic;
-// }*/
+// }
