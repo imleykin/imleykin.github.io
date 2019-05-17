@@ -110,6 +110,17 @@ $(document).ready(function() {
 
   // /Мобильное меню
 
+  //Стрелки в слайдерах
+  var leftSliderArrow = "<svg class='icon icon-arrow-left'>";
+  leftSliderArrow +=
+    "<use xlink:href='svg/sprite/sprite.svg#arrow-left'></use>";
+  leftSliderArrow += "</svg>";
+
+  var rightSliderArrow = "<svg class='icon icon-arrow-right'>";
+  rightSliderArrow +=
+    "<use xlink:href='svg/sprite/sprite.svg#arrow-right'></use>";
+  rightSliderArrow += "</svg>";
+
   $(".products-slider__trigger").owlCarousel({
     loop: false,
     items: 5,
@@ -117,10 +128,7 @@ $(document).ready(function() {
     dots: false,
     autoplayHoverPause: true,
     margin: 33,
-    navText: [
-      "<svg class='icon icon-arrow-left'><use xlink:href='svg/sprite/sprite.svg#arrow-left'></use></svg>",
-      "<svg class='icon icon-arrow-right'><use xlink:href='svg/sprite/sprite.svg#arrow-right'></use></svg>"
-    ],
+    navText: [leftSliderArrow, rightSliderArrow],
     nav: true,
     responsive: {
       0: {
@@ -153,6 +161,8 @@ $(document).ready(function() {
     dots: false,
     autoplayHoverPause: true,
     margin: 4,
+    nav: true,
+    navText: [leftSliderArrow, rightSliderArrow],
     responsive: {
       0: {
         items: 2
@@ -161,10 +171,10 @@ $(document).ready(function() {
         items: 3
       },
       963: {
-        items: 3
+        items: 4
       },
       1197: {
-        items: 4
+        items: 5
       }
     },
     onInitialized: fixOwl,
@@ -178,6 +188,8 @@ $(document).ready(function() {
     dots: false,
     autoplayHoverPause: true,
     margin: 0,
+    nav: true,
+    navText: [leftSliderArrow, rightSliderArrow],
     responsive: {
       0: {
         items: 1
