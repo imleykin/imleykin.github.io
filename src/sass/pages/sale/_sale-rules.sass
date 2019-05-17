@@ -17,14 +17,19 @@
     padding: 0 50px
     cursor: pointer
     margin: 0 0 10px 0
+    @include media-breakpoint-down(sm)
+      justify-content: center
     &-title
       font-weight: bold
       font-size: 17px
+      @include media-breakpoint-down(sm)
+        font-size: 15px
     &-arrow
       transform: rotate(90deg)
       transition: transform .3s ease
       font-size: 16px
       fill: $orange-color
+      margin-left: 15px
   &__text
     background: #F8F8F8
     border-radius: 10px
