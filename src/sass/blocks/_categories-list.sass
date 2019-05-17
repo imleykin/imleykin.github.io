@@ -1,0 +1,60 @@
+$categories-gutter: 15px
+.categories-list
+  @include make-row($categories-gutter)
+  &__item
+    @include make-col-ready($categories-gutter)
+    @include make-col(2.4)
+    margin-bottom: 45px
+
+    @include media-breakpoint-down(md)
+      @include make-col(6)
+
+    @include media-breakpoint-down(xs)
+      @include make-col(12)
+
+.categories-list-item
+  transition: all .5s !important
+  &:hover
+    .categories-list-item__image-wrap
+      background: #FFFFFF
+      color: $primary-color
+      box-shadow: 0px 8px 35px rgba(0, 0, 0, 0.15)
+    .categories-list-item__image-wrap-bg
+      opacity: 1
+  &__title
+    font-size: 16px
+    margin: 25px 0 0 0
+  &__image-wrap
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    padding: 23px 30px
+    height: 220px
+    background: #F9F9F9
+    border-radius: 10px
+    overflow: hidden
+    transition: all .5s !important
+    // @include media-breakpoint-down(xs)
+    //   display: flex
+    //   align-items: center
+    //   height: auto
+    //   min-height: 90px
+    //   padding-right: 150px
+    // @media(max-width: 350px)
+    //   padding-right: 30px
+    &-bg
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: url('../images/bubbles-bg.svg')
+      background-size: cover
+      opacity: 0
+      transition: .5s
+  &__image
+    position: relative
+    z-index: 1
+    max-width: 100%
+    height: auto

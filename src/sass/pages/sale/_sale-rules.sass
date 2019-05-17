@@ -1,0 +1,38 @@
+.sale-rules
+  &.opened
+    .sale-rules__text
+      overflow: auto
+      max-height: 1000px
+      padding: 30px 50px
+      transition: max-height 0.3s ease
+    .sale-rules__trigger-arrow
+      transform: rotate(-90deg)
+  &__trigger
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 60px
+    background: #F8F8F8
+    border-radius: 10px
+    padding: 0 50px
+    cursor: pointer
+    margin: 0 0 10px 0
+    &-title
+      font-weight: bold
+      font-size: 17px
+    &-arrow
+      transform: rotate(90deg)
+      transition: transform .3s ease
+      font-size: 16px
+      fill: $orange-color
+  &__text
+    background: #F8F8F8
+    border-radius: 10px
+    font-size: 16px
+    line-height: 1.6
+    color: #818181
+    overflow: hidden
+    padding: 0 50px
+    max-height: 0
+    margin: 0
+    transition: max-height 0.3s ease, padding 0.55s ease
