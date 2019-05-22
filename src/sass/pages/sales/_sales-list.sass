@@ -25,18 +25,19 @@
 .sales-list-item
   display: flex
   flex-direction: column
-  transition: all .5s !important
+  // transition: all .5s !important
   &:hover
     color: currentColor
     .sales-list-item__title
       color: $orange-color
-    // .sales-list-item__image
-    //   box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.37)
+    .sales-list-item__image
+      box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.37)
   &__image
     align-self: center
     max-width: 100%
     height: auto
     border-radius: 15px
+    transition: inherit
   &__date
     font-family: "PF BeauSans Pro Bbook"
     font-weight: 500
@@ -46,6 +47,7 @@
     font-weight: bold
     font-size: 16px
     margin: 10px 0 0 0
+    transition: inherit
   &__description
     font-size: 16px
     line-height: 1
