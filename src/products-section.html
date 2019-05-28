@@ -16,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- <script src="js/hc-offcanvas-nav.js"></script> -->
     <script src="js/slinky.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
     <script src="js/main.js?ver=1.13"></script>
     <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
     <link rel="stylesheet" href="css/style.css?ver=1.12" />
@@ -538,114 +539,147 @@
           <div class="catalog-products-main-area">
             <div class="catalog-products-main-area__left-block">
               <form class="ifort-filters">
-                <div class="ifort-filters__item ifort-filter-item">
-                  <!-- bx_filter_container active -->
+                <div class="ifort-filters__items-wrap">
+                  <div class="ifort-filters__item ifort-filter-item">
+                    <!-- bx_filter_container active -->
 
-                  <div class="ifort-filter-item__header ifort-filter-header">
-                    <span class="ifort-filter-header__title">Акции</span>
-                    <svg
-                      class="icon icon-arrow-right ifort-filter-header__arrow"
-                    >
-                      <use xlink:href="svg/sprite/sprite.svg#arrow-right"></use>
-                    </svg>
+                    <div class="ifort-filter-item__header ifort-filter-header">
+                      <span class="ifort-filter-header__title">Цена</span>
+                      <svg
+                        class="icon icon-arrow-right ifort-filter-header__arrow"
+                      >
+                        <use
+                          xlink:href="svg/sprite/sprite.svg#arrow-right"
+                        ></use>
+                      </svg>
+                    </div>
+
+                    <div class="ifort-filter-item__content">
+                      <!-- bx_filter_block active -->
+                      <div class="ifort-filter-range">
+                        <div
+                          class="ifort-filter-range__fields ifort-filter-range-fields"
+                        >
+                          <div class="ifort-filter-range-fields__item">
+                            <span class="ifort-filter-range-fields__item-text">
+                              От
+                            </span>
+                            <input
+                              class="ifort-filter-range-fields__item-input min-input"
+                              type="text"
+                              name="KSHOP_SMART_FILTER_431_MIN"
+                              id="KSHOP_SMART_FILTER_431_MIN"
+                              value=""
+                              placeholder="2999"
+                              size="5"
+                              onkeyup="smartFilter.keyup(this)"
+                            />
+                          </div>
+
+                          <div class="ifort-filter-range-fields__item">
+                            <span class="ifort-filter-range-fields__item-text">
+                              До
+                            </span>
+                            <input
+                              class="ifort-filter-range-fields__item-input max-input"
+                              type="text"
+                              name="KSHOP_SMART_FILTER_431_MAX"
+                              id="KSHOP_SMART_FILTER_431_MAX"
+                              value=""
+                              placeholder="59998"
+                              size="5"
+                              onkeyup="smartFilter.keyup(this)"
+                            />
+                          </div>
+                        </div>
+
+                        <div
+                          id="price-slider"
+                          class="ifort-filter-range__slider ifort-filter-range-slider"
+                        ></div>
+                      </div>
+                    </div>
                   </div>
 
-                  <div class="ifort-filter-item__options ifort-filter-options">
-                    <!-- bx_filter_block active -->
+                  <div class="ifort-filters__item ifort-filter-item">
+                    <!-- bx_filter_container active -->
 
-                    <label class="ifort-filter-options__item">
-                      <input
-                        class="ifort-filter-options__checkbox"
-                        type="checkbox"
-                        value="Y"
-                        name="KSHOP_SMART_FILTER_434_1427801588"
-                        id="KSHOP_SMART_FILTER_434_1427801588"
-                        onclick="smartFilter.click(this)"
-                      />
-                      Huawei Honor
-                      <span class="ifort-filter-options__checkmark"></span>
-                    </label>
-                    <label class="ifort-filter-options__item">
-                      <input
-                        class="ifort-filter-options__checkbox"
-                        type="checkbox"
-                        value="Y"
-                        name="KSHOP_SMART_FILTER_434_1427801588"
-                        id="KSHOP_SMART_FILTER_434_1427801588"
-                        onclick="smartFilter.click(this)"
-                      />
-                      Huawei Honor Huawei Honor Huawei Honor Huawei Honor Huawei
-                      Honor Huawei Honor
-                      <span class="ifort-filter-options__checkmark"></span>
-                    </label>
-                    <label class="ifort-filter-options__item">
-                      <input
-                        class="ifort-filter-options__checkbox"
-                        type="checkbox"
-                        value="Y"
-                        name="KSHOP_SMART_FILTER_434_1427801588"
-                        id="KSHOP_SMART_FILTER_434_1427801588"
-                        onclick="smartFilter.click(this)"
-                      />
-                      Huawei Honor
-                      <span class="ifort-filter-options__checkmark"></span>
-                    </label>
+                    <div class="ifort-filter-item__header ifort-filter-header">
+                      <span class="ifort-filter-header__title">Акции</span>
+                      <svg
+                        class="icon icon-arrow-right ifort-filter-header__arrow"
+                      >
+                        <use
+                          xlink:href="svg/sprite/sprite.svg#arrow-right"
+                        ></use>
+                      </svg>
+                    </div>
+
+                    <div
+                      class="ifort-filter-item__content ifort-filter-options"
+                    >
+                      <!-- bx_filter_block active -->
+
+                      <label class="ifort-filter-options__item">
+                        <input
+                          class="ifort-filter-options__checkbox"
+                          type="checkbox"
+                          value="Y"
+                          name="KSHOP_SMART_FILTER_434_1427801588"
+                          id="KSHOP_SMART_FILTER_434_1427801588"
+                          onclick="smartFilter.click(this)"
+                        />
+                        Huawei Honor
+                        <span class="ifort-filter-options__checkmark"></span>
+                      </label>
+                      <label class="ifort-filter-options__item">
+                        <input
+                          class="ifort-filter-options__checkbox"
+                          type="checkbox"
+                          value="Y"
+                          name="KSHOP_SMART_FILTER_434_1427801588"
+                          id="KSHOP_SMART_FILTER_434_1427801588"
+                          onclick="smartFilter.click(this)"
+                        />
+                        Huawei Honor Huawei Honor Huawei Honor Huawei Honor
+                        Huawei Honor Huawei Honor
+                        <span class="ifort-filter-options__checkmark"></span>
+                      </label>
+                      <label class="ifort-filter-options__item">
+                        <input
+                          class="ifort-filter-options__checkbox"
+                          type="checkbox"
+                          value="Y"
+                          name="KSHOP_SMART_FILTER_434_1427801588"
+                          id="KSHOP_SMART_FILTER_434_1427801588"
+                          onclick="smartFilter.click(this)"
+                        />
+                        Huawei Honor
+                        <span class="ifort-filter-options__checkmark"></span>
+                      </label>
+                    </div>
                   </div>
                 </div>
 
-                <div class="ifort-filters__item ifort-filter-item">
-                  <!-- bx_filter_container active -->
-
-                  <div class="ifort-filter-item__header ifort-filter-header">
-                    <span class="ifort-filter-header__title">Акции</span>
-                    <svg
-                      class="icon icon-arrow-right ifort-filter-header__arrow"
-                    >
-                      <use xlink:href="svg/sprite/sprite.svg#arrow-right"></use>
-                    </svg>
-                  </div>
-
-                  <div class="ifort-filter-item__options ifort-filter-options">
-                    <!-- bx_filter_block active -->
-
-                    <label class="ifort-filter-options__item">
-                      <input
-                        class="ifort-filter-options__checkbox"
-                        type="checkbox"
-                        value="Y"
-                        name="KSHOP_SMART_FILTER_434_1427801588"
-                        id="KSHOP_SMART_FILTER_434_1427801588"
-                        onclick="smartFilter.click(this)"
-                      />
-                      Huawei Honor
-                      <span class="ifort-filter-options__checkmark"></span>
-                    </label>
-                    <label class="ifort-filter-options__item">
-                      <input
-                        class="ifort-filter-options__checkbox"
-                        type="checkbox"
-                        value="Y"
-                        name="KSHOP_SMART_FILTER_434_1427801588"
-                        id="KSHOP_SMART_FILTER_434_1427801588"
-                        onclick="smartFilter.click(this)"
-                      />
-                      Huawei Honor Huawei Honor Huawei Honor Huawei Honor Huawei
-                      Honor Huawei Honor
-                      <span class="ifort-filter-options__checkmark"></span>
-                    </label>
-                    <label class="ifort-filter-options__item">
-                      <input
-                        class="ifort-filter-options__checkbox"
-                        type="checkbox"
-                        value="Y"
-                        name="KSHOP_SMART_FILTER_434_1427801588"
-                        id="KSHOP_SMART_FILTER_434_1427801588"
-                        onclick="smartFilter.click(this)"
-                      />
-                      Huawei Honor
-                      <span class="ifort-filter-options__checkmark"></span>
-                    </label>
-                  </div>
+                <div class="ifort-filters__controls ifort-filters-controls">
+                  <button
+                    class="ifort-filters-controls__item btn-orange"
+                    type="submit"
+                    id="set_filter"
+                    name="set_filter"
+                    value="Показать"
+                  >
+                    <span>Показать</span>
+                  </button>
+                  <button
+                    class="ifort-filters-controls__item btn-white"
+                    type="submit"
+                    id="del_filter"
+                    name="del_filter"
+                    value="Сбросить"
+                  >
+                    <span>Сбросить</span>
+                  </button>
                 </div>
               </form>
             </div>
@@ -853,13 +887,43 @@
         $(document).ready(function() {
           $(".ifort-filter-header").click(function() {
             $(this)
-              .siblings(".ifort-filter-options")
+              .siblings(".ifort-filter-item__content")
               .slideToggle();
 
             $(this)
               .parent()
               .toggleClass("hidden");
           });
+        });
+
+        var slider = document.getElementById("price-slider");
+        var minInput = $(".min-input")[0];
+        var maxInput = $(".max-input")[0];
+        noUiSlider.create(slider, {
+          start: [1000, 10000],
+          connect: true,
+          range: {
+            min: 1000,
+            max: 10000
+          }
+        });
+
+        slider.noUiSlider.on("update", function(values, handle) {
+          var value = values[handle];
+
+          if (handle) {
+            maxInput.value = Math.round(value);
+          } else {
+            minInput.value = Math.round(value);
+          }
+        });
+
+        minInput.addEventListener("change", function() {
+          slider.noUiSlider.set([this.value, null]);
+        });
+
+        maxInput.addEventListener("change", function() {
+          slider.noUiSlider.set([null, this.value]);
         });
       </script>
     </div>
