@@ -1,9 +1,11 @@
 .catalog-products-main-area
   display: flex
+  position: relative
+  font-size: 14px
+  @include media-breakpoint-down(md)
+    flex-direction: column
   &__left-block
-    width: 286px
-    margin-right: 15px
+    // width: 286px
+    // margin-right: 15px
   &__right-block
     flex-grow: 1
-    height: 100vh
-    background-color: yellow

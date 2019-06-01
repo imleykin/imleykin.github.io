@@ -1,0 +1,36 @@
+.catalog-products-top-controls
+  display: flex
+  &__item
+    height: 28px
+    color: #818181
+    fill: #818181
+    transition: all .25s ease
+    @include media-breakpoint-down(md)
+      cursor: pointer
+    &:hover
+      @include media-breakpoint-down(md)
+        color: $orange-color !important
+        fill: $orange-color !important
+    &:not(:last-of-type)
+      margin-right: 40px
+  &__adaptive-filter
+    display: none
+    @include media-breakpoint-down(md)
+      display: block
+
+.catalog-products-top-controls-item-title
+  display: flex
+  &__text
+    color: inherit
+    &::after
+      content: ':'
+      @include media-breakpoint-down(md)
+        display: none
+  &__arrow
+    fill: inherit
+    margin-left: 5px
+    margin-top: 7px
+    font-size: 6px
+    display: none
+    @include media-breakpoint-down(md)
+      display: block

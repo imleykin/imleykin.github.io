@@ -1,0 +1,6 @@
+.adaptive-filter-title
+  &:before
+    content: attr(data-filter-show)
+  &.opened
+    &::before
+      content: attr(data-filter-hide)
