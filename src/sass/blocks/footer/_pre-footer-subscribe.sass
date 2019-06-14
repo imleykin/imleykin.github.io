@@ -28,10 +28,12 @@
     width: calc(100% - 2px) !important
     height: 52px !important
     color: #A0A0A0 !important
-    border: 0 !important
+    border: 2px solid transparent !important
     border-radius: 15px !important
     padding: 5px 30px !important
     outline: none !important
+    &.error
+      border: 2px solid $orange-color !important
   &__submit
     position: absolute
     top: 0

@@ -1,0 +1,70 @@
+/*
+ *  Remodal - v1.1.1
+ *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+ *  http://vodkabears.github.io/remodal/
+ *
+ *  Made by Ilya Makarov
+ *  Under MIT License
+ */
+/* ==========================================================================
+   Remodal's necessary styles
+   ========================================================================== */
+/* Hide scroll bar */
+html.remodal-is-locked {
+  overflow: hidden;
+  -ms-touch-action: none;
+  touch-action: none; }
+
+/* Anti FOUC */
+.remodal,
+[data-remodal-id] {
+  display: none; }
+
+/* Necessary styles of the overlay */
+.remodal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+  display: none; }
+
+/* Necessary styles of the wrapper */
+.remodal-wrapper {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch; }
+
+.remodal-wrapper:after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -0.05em;
+  content: ""; }
+
+/* Fix iPad, iPhone glitches */
+.remodal-overlay,
+.remodal-wrapper {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+/* Necessary styles of the modal dialog */
+.remodal {
+  position: relative;
+  outline: none;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%; }
+
+.remodal-is-initialized {
+  /* Disable Anti-FOUC */
+  display: inline-block; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidmVuZG9yL3JlbW9kYWwvcmVtb2RhbC5jc3MiLCJzb3VyY2VzIjpbInZlbmRvci9yZW1vZGFsL3JlbW9kYWwuc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogIFJlbW9kYWwgLSB2MS4xLjFcbiAqICBSZXNwb25zaXZlLCBsaWdodHdlaWdodCwgZmFzdCwgc3luY2hyb25pemVkIHdpdGggQ1NTIGFuaW1hdGlvbnMsIGZ1bGx5IGN1c3RvbWl6YWJsZSBtb2RhbCB3aW5kb3cgcGx1Z2luIHdpdGggZGVjbGFyYXRpdmUgY29uZmlndXJhdGlvbiBhbmQgaGFzaCB0cmFja2luZy5cbiAqICBodHRwOi8vdm9ka2FiZWFycy5naXRodWIuaW8vcmVtb2RhbC9cbiAqXG4gKiAgTWFkZSBieSBJbHlhIE1ha2Fyb3ZcbiAqICBVbmRlciBNSVQgTGljZW5zZVxuICovXG5cbi8qID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG4gICBSZW1vZGFsJ3MgbmVjZXNzYXJ5IHN0eWxlc1xuICAgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gKi9cblxuLyogSGlkZSBzY3JvbGwgYmFyICovXG5cbmh0bWwucmVtb2RhbC1pcy1sb2NrZWQge1xuICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gIC1tcy10b3VjaC1hY3Rpb246IG5vbmU7XG4gIHRvdWNoLWFjdGlvbjogbm9uZTtcbn1cblxuLyogQW50aSBGT1VDICovXG5cbi5yZW1vZGFsLFxuW2RhdGEtcmVtb2RhbC1pZF0ge1xuICBkaXNwbGF5OiBub25lO1xufVxuXG4vKiBOZWNlc3Nhcnkgc3R5bGVzIG9mIHRoZSBvdmVybGF5ICovXG5cbi5yZW1vZGFsLW92ZXJsYXkge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHotaW5kZXg6IDk5OTk7XG4gIHRvcDogLTUwMDBweDtcbiAgcmlnaHQ6IC01MDAwcHg7XG4gIGJvdHRvbTogLTUwMDBweDtcbiAgbGVmdDogLTUwMDBweDtcblxuICBkaXNwbGF5OiBub25lO1xufVxuXG4vKiBOZWNlc3Nhcnkgc3R5bGVzIG9mIHRoZSB3cmFwcGVyICovXG5cbi5yZW1vZGFsLXdyYXBwZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHotaW5kZXg6IDEwMDAwO1xuICB0b3A6IDA7XG4gIHJpZ2h0OiAwO1xuICBib3R0b206IDA7XG4gIGxlZnQ6IDA7XG5cbiAgZGlzcGxheTogbm9uZTtcbiAgb3ZlcmZsb3c6IGF1dG87XG5cbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuXG4gIC13ZWJraXQtb3ZlcmZsb3ctc2Nyb2xsaW5nOiB0b3VjaDtcbn1cblxuLnJlbW9kYWwtd3JhcHBlcjphZnRlciB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcblxuICBoZWlnaHQ6IDEwMCU7XG4gIG1hcmdpbi1sZWZ0OiAtMC4wNWVtO1xuXG4gIGNvbnRlbnQ6IFwiXCI7XG59XG5cbi8qIEZpeCBpUGFkLCBpUGhvbmUgZ2xpdGNoZXMgKi9cblxuLnJlbW9kYWwtb3ZlcmxheSxcbi5yZW1vZGFsLXdyYXBwZXIge1xuICAtd2Via2l0LWJhY2tmYWNlLXZpc2liaWxpdHk6IGhpZGRlbjtcbiAgYmFja2ZhY2UtdmlzaWJpbGl0eTogaGlkZGVuO1xufVxuXG4vKiBOZWNlc3Nhcnkgc3R5bGVzIG9mIHRoZSBtb2RhbCBkaWFsb2cgKi9cblxuLnJlbW9kYWwge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG5cbiAgb3V0bGluZTogbm9uZTtcblxuICAtd2Via2l0LXRleHQtc2l6ZS1hZGp1c3Q6IDEwMCU7XG4gIC1tcy10ZXh0LXNpemUtYWRqdXN0OiAxMDAlO1xuICB0ZXh0LXNpemUtYWRqdXN0OiAxMDAlO1xufVxuXG4ucmVtb2RhbC1pcy1pbml0aWFsaXplZCB7XG4gIC8qIERpc2FibGUgQW50aS1GT1VDICovXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7OztHQU9HO0FBRUg7O2dGQUVnRjtBQUVoRixxQkFBcUI7QUFFckIsQUFBQSxJQUFJLEFBQUEsa0JBQWtCLENBQUM7RUFDckIsUUFBUSxFQUFFLE1BQU07RUFFaEIsZ0JBQWdCLEVBQUUsSUFBSTtFQUN0QixZQUFZLEVBQUUsSUFBSSxHQUNuQjs7QUFFRCxlQUFlO0FBRWYsQUFBQSxRQUFRO0NBQ1IsQUFBQSxlQUFDLEFBQUEsRUFBaUI7RUFDaEIsT0FBTyxFQUFFLElBQUksR0FDZDs7QUFFRCxxQ0FBcUM7QUFFckMsQUFBQSxnQkFBZ0IsQ0FBQztFQUNmLFFBQVEsRUFBRSxLQUFLO0VBQ2YsT0FBTyxFQUFFLElBQUk7RUFDYixHQUFHLEVBQUUsT0FBTztFQUNaLEtBQUssRUFBRSxPQUFPO0VBQ2QsTUFBTSxFQUFFLE9BQU87RUFDZixJQUFJLEVBQUUsT0FBTztFQUViLE9BQU8sRUFBRSxJQUFJLEdBQ2Q7O0FBRUQscUNBQXFDO0FBRXJDLEFBQUEsZ0JBQWdCLENBQUM7RUFDZixRQUFRLEVBQUUsS0FBSztFQUNmLE9BQU8sRUFBRSxLQUFLO0VBQ2QsR0FBRyxFQUFFLENBQUM7RUFDTixLQUFLLEVBQUUsQ0FBQztFQUNSLE1BQU0sRUFBRSxDQUFDO0VBQ1QsSUFBSSxFQUFFLENBQUM7RUFFUCxPQUFPLEVBQUUsSUFBSTtFQUNiLFFBQVEsRUFBRSxJQUFJO0VBRWQsVUFBVSxFQUFFLE1BQU07RUFFbEIsMEJBQTBCLEVBQUUsS0FBSyxHQUNsQzs7QUFFRCxBQUFBLGdCQUFnQixBQUFBLE1BQU0sQ0FBQztFQUNyQixPQUFPLEVBQUUsWUFBWTtFQUVyQixNQUFNLEVBQUUsSUFBSTtFQUNaLFdBQVcsRUFBRSxPQUFPO0VBRXBCLE9BQU8sRUFBRSxFQUFFLEdBQ1o7O0FBRUQsK0JBQStCO0FBRS9CLEFBQUEsZ0JBQWdCO0FBQ2hCLGdCQUFnQixDQUFDO0VBQ2YsMkJBQTJCLEVBQUUsTUFBTTtFQUNuQyxtQkFBbUIsRUFBRSxNQUFNLEdBQzVCOztBQUVELDBDQUEwQztBQUUxQyxBQUFBLFFBQVEsQ0FBQztFQUNQLFFBQVEsRUFBRSxRQUFRO0VBRWxCLE9BQU8sRUFBRSxJQUFJO0VBRWIsd0JBQXdCLEVBQUUsSUFBSTtFQUM5QixvQkFBb0IsRUFBRSxJQUFJO0VBQzFCLGdCQUFnQixFQUFFLElBQUksR0FDdkI7O0FBRUQsQUFBQSx1QkFBdUIsQ0FBQztFQUN0Qix1QkFBdUI7RUFDdkIsT0FBTyxFQUFFLFlBQVksR0FDdEIifQ== */
