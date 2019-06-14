@@ -19,6 +19,13 @@
     box-sizing: border-box
   &.product-item_large
     width: 290px
+  &.product-item_fluid
+    width: 100%
+    max-width: 360px
+    min-width: 270px
+  &.product-item_promo
+    .product-item__product-image
+      max-height: 125px !important
   &__ribbons
 
   &__promo-info
@@ -74,25 +81,41 @@
     display: flex
     align-items: center
     justify-content: center
-    width: 64px
+    // Legacy important
+    width: 64px !important
     border: 1px solid #EEEEEE
     border-left: 0
     border-bottom: 0
     stroke: #b9b9b9
+    // For legacy only
+    height: auto !important
+    border-radius: 0 !important
     &:hover,
     &.added
       stroke: $orange-color
+      // For legacy only
+      background: transparent !important
     &_to-cart
-      color: #fff
-      background: $orange-color
+      // Legacy important
+      color: #fff !important
+      // Legacy important
+      background: $orange-color !important
       flex-grow: 1
       border-right: 0
-      stroke: #fff
+      // Legacy important
+      stroke: #fff !important
+      // For legacy only
+      border-bottom: 0 !important
+      text-transform: none !important
+      padding: 0 !important
       &:hover,
       &.added
-        color: $primary-color
-        stroke: $primary-color
-        background: linear-gradient(350.68deg, #FFC700 12.56%, #FFE300 72.49%)
+        // Legacy important
+        color: $primary-color !important
+        // Legacy important
+        stroke: $primary-color !important
+        // Legacy important
+        background: linear-gradient(350.68deg, #FFC700 12.56%, #FFE300 72.49%) !important
   .icon-item-compare
     font-size: 18px
   .icon-item-favorite
@@ -102,13 +125,15 @@
     margin-left: 7px
   &__product-details
     margin-top: auto
+    // 10px
     margin-bottom: 10px
     text-align: center
     // height: 230px
   &__product-image
     display: inline-block !important
     max-width: 100%  !important
-    max-height: 125px  !important
+    // 125px
+    max-height: 150px  !important
     width: auto !important
   &__product-title
     margin-bottom: 20px

@@ -1,0 +1,21 @@
+$catalog-products-gutter: 20px
+
+.catalog-products-list
+  @include make-row($catalog-products-gutter)
+  margin-top: 30px
+  &__item
+    @include make-col-ready($catalog-products-gutter)
+    @include make-col(4)
+    margin-bottom: $catalog-products-gutter
+
+    @include media-breakpoint-down(lg)
+      @include make-col(6)
+
+    @include media-breakpoint-down(md)
+      @include make-col(4)
+
+    @media(max-width: 900px)
+      @include make-col(6)
+
+    @include media-breakpoint-down(sm)
+      @include make-col(12)
