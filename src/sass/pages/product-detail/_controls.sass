@@ -1,0 +1,45 @@
+.product-detail-controls
+  &__control
+    position: relative
+    display: flex
+    align-items: center
+    stroke: #b9b9b9
+    border: 1px solid #DFDFDF
+    border-radius: 500px
+    width: 40px
+    height: 40px
+    transition: all 0.4s ease !important
+    &:not(:last-child)
+      margin-bottom: 10px
+    &-text
+      opacity: 0
+      padding-left: 38px
+      margin: 0
+      transition: all 0.1s ease !important
+      color: $primary-color
+    &:hover
+      width: 135px
+      .product-detail-controls__control-text
+        opacity: 1
+        transition: opacity 0.2s ease 0.2s !important
+    &-icon
+      position: absolute
+      font-size: 18px
+      &.icon-item-compare
+        top: 10.5px
+        left: 9.8px
+      &.icon-item-favorite
+        top: 10.5px
+        left: 8.8px
+    &.added
+      border-color: $orange-color
+      .product-detail-controls__control-text
+        &:before
+          content: attr(data-added)
+          color: $orange-color
+      .product-detail-controls__control-icon
+        stroke: $orange-color
+    &:not(added)
+      .product-detail-controls__control-text
+        &:before
+          content: attr(data-not-added)
