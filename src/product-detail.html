@@ -16,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- <script src="js/hc-offcanvas-nav.js"></script> -->
     <script src="js/slinky.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/main.js?ver=1.13"></script>
     <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
@@ -467,6 +468,76 @@
                   ></p>
                 </a>
               </div>
+              <div class="product-detail-main-info__gallery product-detail-gallery">
+                <div class="product-detail-gallery__thumbs product-detail-gallery-thumbs">
+                  <div class="product-detail-gallery-thumbs__slider product-detail-gallery-thumbs-slider">
+                    <div class="product-detail-gallery-thumbs-slider-item">
+                      <div class="product-detail-gallery-thumbs-slider-item__inner">
+                        <img
+                          src="images/product1-sm.jpg"
+                          alt=""
+                          class="product-detail-gallery-thumbs-slider-item__image"
+                        />
+                      </div>
+                    </div>
+                    <div class="product-detail-gallery-thumbs-slider-item">
+                      <div class="product-detail-gallery-thumbs-slider-item__inner">
+                        <img
+                          src="images/product1-sm.jpg"
+                          alt=""
+                          class="product-detail-gallery-thumbs-slider-item__image"
+                        />
+                      </div>
+                    </div>
+                    <div class="product-detail-gallery-thumbs-slider-item">
+                      <div class="product-detail-gallery-thumbs-slider-item__inner">
+                        <img
+                          src="images/product1-sm.jpg"
+                          alt=""
+                          class="product-detail-gallery-thumbs-slider-item__image"
+                        />
+                      </div>
+                    </div>
+                    <div class="product-detail-gallery-thumbs-slider-item">
+                      <div class="product-detail-gallery-thumbs-slider-item__inner">
+                        <img
+                          src="images/product1-sm.jpg"
+                          alt=""
+                          class="product-detail-gallery-thumbs-slider-item__image"
+                        />
+                      </div>
+                    </div>
+                    <div class="product-detail-gallery-thumbs-slider-item">
+                      <div class="product-detail-gallery-thumbs-slider-item__inner">
+                        <img
+                          src="images/product1-sm.jpg"
+                          alt=""
+                          class="product-detail-gallery-thumbs-slider-item__image"
+                        />
+                      </div>
+                    </div>
+                    <div class="product-detail-gallery-thumbs-slider-item">
+                      <div class="product-detail-gallery-thumbs-slider-item__inner">
+                        <img
+                          src="images/product1-sm.jpg"
+                          alt=""
+                          class="product-detail-gallery-thumbs-slider-item__image"
+                        />
+                      </div>
+                    </div>
+                    <div class="product-detail-gallery-thumbs-slider-item">
+                      <div class="product-detail-gallery-thumbs-slider-item__inner">
+                        <img
+                          src="images/product1-sm.jpg"
+                          alt=""
+                          class="product-detail-gallery-thumbs-slider-item__image"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-detail-gallery__photos"></div>
+              </div>
             </div>
 
             <div class="product-detail-main-info__right"></div>
@@ -474,7 +545,38 @@
         </div>
       </div>
     </div>
+    <script>
+      $(document).ready(function() {
+        var leftSliderArrow = "<svg class='icon icon-arrow-right product-detail-gallery-thumbs-slider__arrow-up'>";
+        leftSliderArrow += "<use xlink:href='svg/sprite/sprite.svg#arrow-right'></use>";
+        leftSliderArrow += "</svg>";
 
+        var rightSliderArrow = "<svg class='icon icon-arrow-right product-detail-gallery-thumbs-slider__arrow-down'>";
+        rightSliderArrow += "<use xlink:href='svg/sprite/sprite.svg#arrow-right'></use>";
+        rightSliderArrow += "</svg>";
+
+        $(".product-detail-gallery-thumbs-slider")
+          .slick({
+            vertical: true,
+            verticalSwiping: true,
+            infinite: true,
+            slidesToShow: 3,
+            focusOnSelect: true,
+            prevArrow: leftSliderArrow,
+            nextArrow: rightSliderArrow
+            // variableWidth: true
+          })
+          .on("wheel", function(e) {
+            e.preventDefault();
+
+            if (e.originalEvent.deltaY < 0) {
+              $(this).slick("slickNext");
+            } else {
+              $(this).slick("slickPrev");
+            }
+          });
+      });
+    </script>
     <div class="pre-footer">
       <div class="pre-footer__subscribe pre-footer-subscribe">
         <div class="main-wrapper">
