@@ -535,8 +535,38 @@
                       </div>
                     </div>
                   </div>
+                  <a
+                    href="https://www.youtube.com/watch?v=Hcb8Ftm1Lac"
+                    class="product-detail-gallery-thumbs__video-thumb product-detail-gallery-thumbs-video-thumb"
+                  >
+                    <svg class="icon icon-youtube-logo product-detail-gallery-thumbs-video-thumb__icon">
+                      <use xlink:href="svg/sprite/sprite.svg#youtube-logo"></use>
+                    </svg>
+                    <p class="product-detail-gallery-thumbs-video-thumb__text">Видео</p>
+                  </a>
                 </div>
-                <div class="product-detail-gallery__photos"></div>
+                <div class="product-detail-gallery__photos product-detail-gallery-photos">
+                  <div class="product-detail-gallery-photos__slider product-detail-gallery-photos-slider">
+                    <div class="product-detail-gallery-photos-slider__item product-detail-gallery-photos-slider-item">
+                      <div class="product-detail-gallery-photos-slider-item__inner">
+                        <img
+                          src="images/product1-lg.jpg"
+                          alt=""
+                          class="product-detail-gallery-photos-slider-item__image"
+                        />
+                      </div>
+                    </div>
+                    <div class="product-detail-gallery-photos-slider__item product-detail-gallery-photos-slider-item">
+                      <div class="product-detail-gallery-photos-slider-item__inner">
+                        <img
+                          src="images/product1-lg.jpg"
+                          alt=""
+                          class="product-detail-gallery-photos-slider-item__image"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -563,8 +593,8 @@
             slidesToShow: 3,
             focusOnSelect: true,
             prevArrow: leftSliderArrow,
-            nextArrow: rightSliderArrow
-            // variableWidth: true
+            nextArrow: rightSliderArrow,
+            asNavFor: ".product-detail-gallery-photos-slider"
           })
           .on("wheel", function(e) {
             e.preventDefault();
@@ -575,6 +605,17 @@
               $(this).slick("slickPrev");
             }
           });
+
+        $(".product-detail-gallery-photos-slider").slick({
+          // infinite: true,
+          slidesToShow: 1,
+          dots: false,
+          focusOnSelect: false,
+          arrows: false,
+          // variableWidth: true,
+          asNavFor: ".product-detail-gallery-thumbs-slider"
+          //
+        });
       });
     </script>
     <div class="pre-footer">

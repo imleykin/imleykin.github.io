@@ -1,31 +1,33 @@
 @import '../../vendor/slick/slick'
 // @import '../../vendor/slick/slick-themed'
+// *
+//   min-height: 0
 
 .product-detail-gallery
+  display: flex
+  align-items: center
   &__thumbs
+    width: calc(67px + 20px)
     padding-top: 118px
+  &__photos
+    width: calc(100% - 87px)
+    @include media-breakpoint-down(sm)
+      width: 100%
 
 .product-detail-gallery-thumbs
-  width: calc(67px + 20px)
   margin-left: -10px
-  // padding-left: 10px
-  // padding-right: 10px
-  // width: calc(67px + 20px)
-  &__slider
-    // margin-left: -10px
+  @include media-breakpoint-down(sm)
+    display: none
+  &__video-thumb
+    margin-top: 15px
 
 .product-detail-gallery-thumbs-slider
   text-align: center
-  .slick-list
-    // padding-left: 10px
-    // padding-right: 10px
-  // .slick-arrow
-  //   margin-left: 38px
   .slick-slide
     margin: 6px 0
   &__arrow-up,
   &__arrow-down
-    font-size: 13px
+    font-size: 12px
     fill: #b2b2b2
     transition: all .5s ease
     &:hover
@@ -55,3 +57,29 @@
   &__image
     max-width: 85%
     max-height: 85%
+
+.product-detail-gallery-photos-slider
+  width: 100%
+
+.product-detail-gallery-photos-slider-item
+  outline: none
+  &__inner
+    display: flex
+    justify-content: center
+    align-items: center
+    // width: 200px
+  &__image
+    max-width: calc(100% - 5px)
+
+.product-detail-gallery-thumbs-video-thumb
+  display: block
+  text-align: center
+  &__icon
+    fill: $primary-color
+    font-size: 30px
+  &__text
+    margin: 0
+    font-family: PF BeauSans Pro Bbook
+    font-weight: 600
+    font-size: 13px
+    text-transform: uppercase
