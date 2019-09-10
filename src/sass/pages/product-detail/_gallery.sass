@@ -1,7 +1,10 @@
 @import '../../vendor/slick/slick'
-// @import '../../vendor/slick/slick-themed'
-// *
-//   min-height: 0
+
+$lg-path-fonts: '../fonts/lightgallery'
+$lg-path-images: '../images/lightgallery'
+
+@import '../../vendor/lightgallery/lightgallery'
+
 
 .product-detail-gallery
   display: flex
@@ -67,7 +70,8 @@
     display: flex
     justify-content: center
     align-items: center
-    // width: 200px
+    &:focus
+      outline: none
   &__image
     max-width: calc(100% - 5px)
 

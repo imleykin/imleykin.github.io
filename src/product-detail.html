@@ -17,6 +17,11 @@
     <!-- <script src="js/hc-offcanvas-nav.js"></script> -->
     <script src="js/slinky.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/lightgallery.min.js"></script>
+    <script src="js/lg-fullscreen.min.js"></script>
+    <script src="js/lg-thumbnail.min.js"></script>
+    <script src="js/lg-autoplay.min.js"></script>
+    <script src="js/lg-video.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/main.js?ver=1.13"></script>
     <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
@@ -537,7 +542,7 @@
                   </div>
                   <a
                     href="https://www.youtube.com/watch?v=Hcb8Ftm1Lac"
-                    class="product-detail-gallery-thumbs__video-thumb product-detail-gallery-thumbs-video-thumb"
+                    class="product-detail-gallery-thumbs__video-thumb product-detail-gallery-thumbs-video-thumb product-detail-gallery__popup-item"
                   >
                     <svg class="icon icon-youtube-logo product-detail-gallery-thumbs-video-thumb__icon">
                       <use xlink:href="svg/sprite/sprite.svg#youtube-logo"></use>
@@ -548,22 +553,30 @@
                 <div class="product-detail-gallery__photos product-detail-gallery-photos">
                   <div class="product-detail-gallery-photos__slider product-detail-gallery-photos-slider">
                     <div class="product-detail-gallery-photos-slider__item product-detail-gallery-photos-slider-item">
-                      <div class="product-detail-gallery-photos-slider-item__inner">
+                      <a
+                        href="images/product1-lg.jpg"
+                        data-exthumbimage="images/product1-lg.jpg"
+                        class="product-detail-gallery-photos-slider-item__inner product-detail-gallery__popup-item"
+                      >
                         <img
                           src="images/product1-lg.jpg"
                           alt=""
                           class="product-detail-gallery-photos-slider-item__image"
                         />
-                      </div>
+                      </a>
                     </div>
                     <div class="product-detail-gallery-photos-slider__item product-detail-gallery-photos-slider-item">
-                      <div class="product-detail-gallery-photos-slider-item__inner">
+                      <a
+                        href="images/product1-lg.jpg"
+                        data-exthumbimage="images/product1-lg.jpg"
+                        class="product-detail-gallery-photos-slider-item__inner product-detail-gallery__popup-item"
+                      >
                         <img
                           src="images/product1-lg.jpg"
                           alt=""
                           class="product-detail-gallery-photos-slider-item__image"
                         />
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -607,14 +620,19 @@
           });
 
         $(".product-detail-gallery-photos-slider").slick({
-          // infinite: true,
           slidesToShow: 1,
           dots: false,
           focusOnSelect: false,
           arrows: false,
-          // variableWidth: true,
+          infinite: false,
           asNavFor: ".product-detail-gallery-thumbs-slider"
           //
+        });
+
+        $(".product-detail-gallery").lightGallery({
+          selector: ".product-detail-gallery__popup-item",
+          download: false,
+          counter: false
         });
       });
     </script>
