@@ -661,7 +661,11 @@
                   3G, 4G LTE, LTE-A, Wi-Fi, Bluetooth, GPS, ГЛОНАСС
                 </p>
 
-                <a href="#" class="product-detail-briefly-features__see-all" onclick="openTab(event, 'Features', true)">
+                <a
+                  href="#"
+                  class="product-detail-briefly-features__see-all"
+                  onclick="openTab(event, 'Features', 'scroll')"
+                >
                   Все характеристики
                   <svg class="icon icon-arrow-long-right">
                     <use xlink:href="svg/sprite/sprite.svg#arrow-long-right"></use>
@@ -676,10 +680,18 @@
       <div class="page-product-detail__tabs-links page-product-detail-tab-links">
         <div class="main-wrapper">
           <div class="page-product-detail-tab-links__inner">
-            <button class="page-product-detail-tab-links__item js-tab-link active" onclick="openTab(event, 'About')">
+            <button
+              class="page-product-detail-tab-links__item js-tab-link active"
+              data-tab="About"
+              onclick="openTab(event, 'About')"
+            >
               О товаре
             </button>
-            <button class="page-product-detail-tab-links__item js-tab-link" onclick="openTab(event, 'Features')">
+            <button
+              class="page-product-detail-tab-links__item js-tab-link"
+              data-tab="Features"
+              onclick="openTab(event, 'Features')"
+            >
               Характеристики
             </button>
           </div>
@@ -746,11 +758,12 @@
         });
       });
 
-      function openTab(e, tabId, scroll) {
+      function openTab(e, tabName, mode) {
         e.preventDefault();
 
         var i, tabcontent, tablinks;
-        var targetTab = document.getElementById(tabId);
+        var targetTab = document.getElementById(tabName);
+        var targetTabLink = document.querySelector("[data-tab=" + tabName + "]");
 
         tabcontent = document.getElementsByClassName("js-tab-content");
         for (i = 0; i < tabcontent.length; i++) {
@@ -763,9 +776,9 @@
         }
 
         targetTab.className += " active";
-        e.currentTarget.className += " active";
+        targetTabLink.className += " active";
 
-        if (scroll) {
+        if (mode === "scroll") {
           targetTab.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }
