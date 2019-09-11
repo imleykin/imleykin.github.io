@@ -11,3 +11,27 @@
     top: 0
     left: 0
     z-index: 1
+
+.product-detail-main-info-right
+  &__top
+    display: block
+    // display: flex
+    // justify-content: space-between
+
+.product-detail-main-info-stock
+  position: relative
+  &_in-stock
+    color: $orange-color
+    stroke: $orange-color
+    fill: $orange-color
+  &_out-of-stock
+    color: $error-color
+    stroke: $error-color
+    fill: $error-color
+  &__text
+    padding-left: 22px
+    margin: 0
+    font-size: 14px
+  &__icon
+    font-size: 16px
+    position: absolute
