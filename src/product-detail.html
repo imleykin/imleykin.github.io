@@ -661,7 +661,7 @@
                   3G, 4G LTE, LTE-A, Wi-Fi, Bluetooth, GPS, ГЛОНАСС
                 </p>
 
-                <a href="#" class="product-detail-briefly-features__see-all">
+                <a href="#" class="product-detail-briefly-features__see-all" onclick="openTab(event, 'Features', true)">
                   Все характеристики
                   <svg class="icon icon-arrow-long-right">
                     <use xlink:href="svg/sprite/sprite.svg#arrow-long-right"></use>
@@ -670,6 +670,31 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="page-product-detail__tabs-links page-product-detail-tab-links">
+        <div class="main-wrapper">
+          <div class="page-product-detail-tab-links__inner">
+            <button class="page-product-detail-tab-links__item js-tab-link active" onclick="openTab(event, 'About')">
+              О товаре
+            </button>
+            <button class="page-product-detail-tab-links__item js-tab-link" onclick="openTab(event, 'Features')">
+              Характеристики
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="About" class="page-product-detail__tab-content page-product-detail-tab-content js-tab-content active">
+        <div class="main-wrapper">
+          <div class="">О товаре</div>
+        </div>
+      </div>
+
+      <div id="Features" class="page-product-detail__tab-content page-product-detail-tab-content js-tab-content">
+        <div class="main-wrapper">
+          <div class="">Характеристики</div>
         </div>
       </div>
     </div>
@@ -720,6 +745,30 @@
           counter: false
         });
       });
+
+      function openTab(e, tabId, scroll) {
+        e.preventDefault();
+
+        var i, tabcontent, tablinks;
+        var targetTab = document.getElementById(tabId);
+
+        tabcontent = document.getElementsByClassName("js-tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+        }
+
+        tablinks = document.getElementsByClassName("js-tab-link");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        targetTab.className += " active";
+        e.currentTarget.className += " active";
+
+        if (scroll) {
+          targetTab.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
     </script>
     <div class="pre-footer">
       <div class="pre-footer__subscribe pre-footer-subscribe">
