@@ -1435,8 +1435,20 @@
           focusOnSelect: false,
           arrows: false,
           infinite: false,
-          asNavFor: ".product-detail-gallery-thumbs-slider"
-          //
+          asNavFor: ".product-detail-gallery-thumbs-slider",
+          mobileFirst: false,
+          responsive: [
+            {
+              breakpoint: 767.98,
+              settings: {
+                dots: true,
+                customPaging: function(slider, i) {
+                  // this example would render "tabs" with titles
+                  return '<span class="product-detail-gallery-photos-slider__dot"></span>';
+                }
+              }
+            }
+          ]
         });
 
         $(".product-detail-gallery").lightGallery({
