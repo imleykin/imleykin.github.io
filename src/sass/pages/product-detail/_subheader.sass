@@ -1,7 +1,13 @@
 .product-detail-subheader
   &__rating
     margin-right: 23px
+    @include media-breakpoint-down(sm)
+      margin: 0 0 10px 0
 
 .product-detail-subheader-left
   display: flex
   align-items: center
+  @include media-breakpoint-down(md)
+    justify-content: center
+  @include media-breakpoint-down(sm)
+    flex-direction: column
