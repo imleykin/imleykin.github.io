@@ -88,6 +88,20 @@
       background: url(../images/checkmark.svg) 0 50% no-repeat
       transition: all .25s ease
 
+
+.ifort-filter-options-more
+    margin-top: 10px
+    &.active
+      .ifort-filter-options-more__link
+        &::after
+          content: attr(data-hide)
+    &__items
+      margin-bottom: 10px
+      display: none
+    &__link
+      &::after
+        content: attr(data-show)
+
 .ifort-filter-range-fields
   display: flex
   // justify-content: space-between
@@ -163,5 +177,4 @@
       color: currentColor
     &__show
       color: $orange-color
-      text-decoration: underline
       padding-left: 12px
