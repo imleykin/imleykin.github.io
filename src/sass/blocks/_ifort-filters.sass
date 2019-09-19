@@ -49,7 +49,8 @@
     display: block
     position: relative
     padding-left: 20px
-    text-transform: capitalize
+    &::first-letter
+      text-transform: uppercase
     &:not(.disabled)
       cursor: pointer
     &:not(.disabled):hover
