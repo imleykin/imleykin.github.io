@@ -9,6 +9,8 @@ $lg-path-images: '../images/lightgallery'
 .product-detail-gallery
   display: flex
   align-items: center
+  &_one-photo
+    justify-content: center
   &__thumbs
     width: calc(67px + 20px)
     padding-top: 118px
@@ -33,7 +35,9 @@ $lg-path-images: '../images/lightgallery'
     font-size: 12px
     fill: #b2b2b2
     transition: all .5s ease
-    &:hover
+    &[aria-disabled="true"]
+      opacity: 0
+    &:not([aria-disabled="true"]):hover
       fill: #FF5200
   &__arrow-up
   &__arrow-down
