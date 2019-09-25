@@ -26,7 +26,10 @@
   &.product-item_promo
     .product-item__product-image
       max-height: 125px !important
+    .product-item__product-title
+      height: auto
   &__ribbons
+    position: absolute
 
   &__promo-info
     font-weight: bold
@@ -136,12 +139,16 @@
     max-height: 150px  !important
     width: auto !important
   &__product-title
+    height: 48px
+    overflow: hidden
     margin-bottom: 20px
     text-align: center
   &__prices
     display: flex
     justify-content: space-between
     align-items: flex-end
+    height: 40px
+    overflow: hidden
     &-left-area
       text-align: left
     &-right-area
