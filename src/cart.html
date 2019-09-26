@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <title>Ifort</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- <script src="js/hc-offcanvas-nav.js"></script> -->
+    <script src="js/slinky.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/main.js?ver=1.13"></script>
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+    <link rel="stylesheet" href="css/style.css?ver=1.12" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-desktop header-desktop_shadow">
+        <div class="header-desktop__top-bar top-bar">
+          <div class="main-wrapper">
+            <div class="top-bar-wrap">
+              <ul class="top-bar__menu">
+                <li class="top-bar__menu-item">
+                  <a href="#" class="link top-bar__menu-item-link"> Оплата и доставка </a>
+                </li>
+                <li class="top-bar__menu-item"><a href="#" class="link top-bar__menu-item-link"> Контакты </a></li>
+              </ul>
+
+              <div class="top-bar__center-area">
+                <!--
+                  <div class="header-work-time">
+                    <svg class="icon icon-clocks header-work-time__icon">
+                      <use xlink:href="svg/sprite/sprite.svg#clocks"></use>
+                    </svg>
+                    <p class="header-work-time__text">
+                      Часы работы: Пн-Пт.: с 10:00 до 19:00, Сб-Вс.: с 10:00 до
+                      18:00
+                    </p>
+                  </div>
+                -->
+              </div>
+
+              <div class="top-bar__right">
+                <div class="top-bar__work-time header-work-time">
+                  <svg class="icon icon-clocks header-work-time__icon">
+                    <use xlink:href="svg/sprite/sprite.svg#clocks"></use>
+                  </svg>
+                  <p class="header-work-time__text">Пн-Пт.: с 10:00 до 19:00, Сб-Вс.: с 10:00 до 18:00</p>
+                </div>
+
+                <a href="tel:+7 (351) 262-20-01" class="link top-bar__phone-number header-phone">
+                  <svg class="icon icon-phone header-phone__icon">
+                    <use xlink:href="svg/sprite/sprite.svg#phone"></use>
+                  </svg>
+                  +7 (351) 262-20-05
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-desktop__main-area header-main-area">
+          <div class="main-wrapper">
+            <div class="header-main-area-wrap">
+              <div class="header-main-area__logo header-logo-container">
+                <a href="/" class="header-logo-container__link">
+                  <img src="images/logo.svg" class="header-logo-container__image" alt="логотип Ifort" />
+                </a>
+              </div>
+
+              <div class="header-main-area__search products-search">
+                <form action="/catalog/" class="search1">
+                  <input
+                    id="title-search-input-2"
+                    class="ifort-input products-search__input"
+                    type="text"
+                    name="q"
+                    placeholder="Поиск по сайту..."
+                    autocomplete="off"
+                  />
+                  <button id="search-submit-button" type="submit" class="products-search__submit">
+                    <!-- <span class="icon i-search"></span> -->
+                    <svg class="icon icon-search"><use xlink:href="svg/sprite/sprite.svg#search"></use></svg>
+                  </button>
+                </form>
+              </div>
+
+              <div class="header-main-area__login header-login">
+                <!-- <span class="icon i-user header-login__icon"></span> -->
+                <svg class="icon icon-user header-login__icon"><use xlink:href="svg/sprite/sprite.svg#user"></use></svg>
+
+                <div class="header-login__links">
+                  <a href="" class="link header-login__link header-login__sign-in"> Вход </a>
+                  <a href="" class="link header-login__link header-login__sign-up"> Регистрация </a>
+                </div>
+              </div>
+
+              <div class="header-desktop__personal personal-section">
+                <a href="#" data-count="10" class="personal-section__item personal-section__compare">
+                  <svg class="icon icon-header-compare">
+                    <use xlink:href="svg/sprite/sprite.svg#header-compare"></use>
+                  </svg>
+                </a>
+                <a href="#" data-count="18" class="personal-section__item personal-section__favorite">
+                  <svg class="icon icon-header-favorite">
+                    <use xlink:href="svg/sprite/sprite.svg#header-favorite"></use>
+                  </svg>
+                  <!-- <p class="personal-section__item-count">10</p> -->
+                </a>
+                <a href="#" data-count="5" class="personal-section__item personal-section__cart">
+                  <svg class="icon icon-header-cart"><use xlink:href="svg/sprite/sprite.svg#header-cart"></use></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="header-desktop__catalog-menu catalog-menu">
+          <div class="main-wrapper">
+            <ul class="catalog-menu__wrap">
+              <li class="catalog-menu__item catalog-menu-item">
+                <a href="" class="catalog-menu-item__link">
+                  Компьютеры и Комплектующие
+                  <svg class="icon icon-arrow-down catalog-menu-item__arrow">
+                    <use xlink:href="svg/sprite/sprite.svg#arrow-down"></use>
+                  </svg>
+                </a>
+                <div class="catalog-menu__submenu">
+                  <div class="catalog-menu__submenu-images catalog-submenu-images">
+                    <div class="catalog-submenu-images__image-wrap">
+                      <img src="images/catalog-image.png" alt="" class="catalog-submenu-images__image" />
+                    </div>
+
+                    <div class="catalog-submenu-images__image-wrap">
+                      <img src="images/catalog-image.png" alt="" class="catalog-submenu-images__image" />
+                    </div>
+                  </div>
+                  <div class="catalog-menu__submenu-sections">
+                    <ul class="catalog-menu__submenu-section catalog-submenu-section">
+                      <li class="catalog-submenu-section__item catalog-submenu-section__item--title">
+                        <a href="#">Комплектующие</a>
+                      </li>
+                      <li class="catalog-submenu-section__item"><a href="#">Корпуса и блоки питания к ним</a></li>
+                      <li class="catalog-submenu-section__item"><a href="#">Корпуса и блоки питания к ним</a></li>
+                      <li class="catalog-submenu-section__item"><a href="#">Корпуса и блоки питания к ним</a></li>
+                      <li class="catalog-submenu-section__item"><a href="#">Корпуса и блоки питания к ним</a></li>
+                    </ul>
+
+                    <ul class="catalog-menu__submenu-section catalog-submenu-section">
+                      <li class="catalog-submenu-section__item catalog-submenu-section__item--title">
+                        <a href="#">Комплектующие</a>
+                      </li>
+                      <li class="catalog-submenu-section__item"><a href="#">Корпуса и блоки питания к ним</a></li>
+                      <li class="catalog-submenu-section__item"><a href="#">Корпуса и блоки питания к ним</a></li>
+                      <li class="catalog-submenu-section__item"><a href="#">Корпуса и блоки питания к ним</a></li>
+                      <li class="catalog-submenu-section__item"><a href="#">Корпуса и блоки питания к ним</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="catalog-menu__item catalog-menu-item">
+                <a href="" class="catalog-menu-item__link"> Квадрокоптеры </a>
+              </li>
+              <li class="catalog-menu__item catalog-menu-item">
+                <a href="" class="catalog-menu-item__link"> Смартфоны </a>
+              </li>
+              <li class="catalog-menu__item catalog-menu-item">
+                <a href="" class="catalog-menu-item__link"> Видео </a>
+              </li>
+              <li class="catalog-menu__item catalog-menu-item">
+                <a href="" class="catalog-menu-item__link">Акции </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="header-mobile">
+        <div class="header-mobile__personal mobile-personal-section">
+          <div class="main-wrapper">
+            <div class="mobile-personal-section__wrap">
+              <a href="#" data-count="5" class="mobile-personal-section__item mobile-personal-section__item_counter">
+                <svg class="icon icon-header-cart mobile-personal-section__icon-cart">
+                  <use xlink:href="svg/sprite/sprite.svg#header-cart"></use>
+                </svg>
+                <!-- <p class="mobile-personal-section__item-count">10</p> -->
+              </a>
+
+              <a href="#" data-count="5" class="mobile-personal-section__item mobile-personal-section__item_counter">
+                <svg class="icon icon-header-compare mobile-personal-section__icon-compare">
+                  <use xlink:href="svg/sprite/sprite.svg#header-compare"></use>
+                </svg>
+                <!-- <p class="mobile-personal-section__item-count">10</p> -->
+              </a>
+
+              <a
+                href="#"
+                data-count="5"
+                class="mobile-personal-section__item mobile-personal-section__item_counter empty"
+              >
+                <svg class="icon icon-header-favorite mobile-personal-section__icon-favorite">
+                  <use xlink:href="svg/sprite/sprite.svg#header-favorite"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="mobile-personal-section__item">
+                <svg class="icon icon-phone-mobile mobile-personal-section__icon-phone">
+                  <use xlink:href="svg/sprite/sprite.svg#phone-mobile"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="mobile-personal-section__item">
+                <svg class="icon icon-user  mobile-personal-section__icon-user">
+                  <use xlink:href="svg/sprite/sprite.svg#user"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-wrapper">
+          <div class="header-mobile__wrap">
+            <div class="header-mobile__left-area">
+              <button class="header-mobile__toggle hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box"> <span class="hamburger-inner"></span> </span>
+              </button>
+            </div>
+
+            <div class="header-mobile__center-area">
+              <a href="/" class="header-mobile__to-main-link">
+                <img src="images/logo.svg" class="header-mobile__logo" alt="logo" />
+              </a>
+            </div>
+
+            <div class="header-mobile__right-area">
+              <a href="#" class="header-mobile__search">
+                <svg class="icon icon-search header-mobile__search-icon">
+                  <use xlink:href="svg/sprite/sprite.svg#search"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-mobile__menu mobile-menu" style="transform: translate3d(-100%, 0, 0)">
+          <div class="mobile-menu__wrap">
+            <ul>
+              <li><a href="#">Каталог</a></li>
+              <li>
+                <a href="#">Товары для животных</a>
+                <ul>
+                  <li>
+                    <a href="#">Для кошек</a>
+                    <ul>
+                      <li><a href="#">Влажный корм</a></li>
+                      <li><a href="#">Сухой корм</a></li>
+                      <li><a href="#">Корм в больших упаковках</a></li>
+                      <li><a href="#">Лакомства</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Для собак</a>
+                    <ul>
+                      <li><a href="#">Влажный корм</a></li>
+                      <li><a href="#">Сухой корм</a></li>
+                      <li><a href="#">Корм в больших упаковках</a></li>
+                      <li><a href="#">Лакомства</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Для грызунов</a>
+                    <ul>
+                      <li><a href="#">Аксессуары</a></li>
+                      <li><a href="#">Корма</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Красота, гигиена, бытовая химия</a>
+                <ul>
+                  <li>
+                    <a href="#">Уход за кожей</a>
+                    <ul>
+                      <li><a href="#">Средства для лица</a></li>
+                      <li><a href="#">Средства для рук</a></li>
+                      <li><a href="#">Средства для тела</a></li>
+                      <li><a href="#">Средства для ног</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Уход за волосами</a>
+                    <ul>
+                      <li><a href="#">Шампуни и средства для ухода после мытья</a></li>
+                      <li><a href="#">Средства для окрашивания</a></li>
+                      <li><a href="#">Средства для укладки</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Уход за полостью рта</a>
+                    <ul>
+                      <li><a href="#">Зубные пасты, гели</a></li>
+                      <li><a href="#">Зубные щетки, нити, зубочистки</a></li>
+                      <li><a href="#">Ополаскиватели для рта</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Молоко, сыр, яйца</a>
+                <ul>
+                  <li><a href="#">Молоко</a></li>
+                  <li><a href="#">Сыры</a></li>
+                  <li><a href="#">Творог, сырки</a></li>
+                  <li><a href="#">Йогурты и десерты</a></li>
+                  <li><a href="#">Молочные коктейли</a></li>
+                  <li><a href="#">Сливки</a></li>
+                  <li><a href="#">Сгущенное молоко</a></li>
+                  <li><a href="#">Сметана</a></li>
+                  <li><a href="#">Яйца</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Овощи, фрукты, грибы</a>
+                <ul>
+                  <li>
+                    <a href="#">Фрукты</a>
+                    <ul>
+                      <li><a href="#">Бананы</a></li>
+                      <li><a href="#">Апельсины</a></li>
+                      <li><a href="#">Яблоки</a></li>
+                      <li><a href="#">Манго</a></li>
+                      <li><a href="#">Помело</a></li>
+                      <li><a href="#">Мандарины</a></li>
+                      <li><a href="#">Виноград</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Овощи</a>
+                    <ul>
+                      <li><a href="#">Капуста</a></li>
+                      <li><a href="#">Картофель</a></li>
+                      <li><a href="#">Морковь</a></li>
+                      <li><a href="#">Лук</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="">Ягоды</a></li>
+                  <li><a href="">Грибы</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Мясо, птица, деликатесы</a>
+                <ul>
+                  <li><a href="#">Мясо птицы</a></li>
+                  <li><a href="#">Свинина</a></li>
+                  <li><a href="#">Говядина</a></li>
+                  <li><a href="#">Телятина</a></li>
+                  <li><a href="#">Баранина</a></li>
+                  <li>
+                    <a href="#">Фарш</a>
+                    <ul>
+                      <li><a href="#">Говядина</a></li>
+                      <li><a href="#">Свинина</a></li>
+                      <li><a href="#">Курица</a></li>
+                      <li><a href="#">Баранина</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Колбасы, ветчина</a></li>
+                  <li><a href="#">Шашлык</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Макароны, крупы, специи</a></li>
+              <li><a href="#">Хлеб, сладости, снеки</a></li>
+              <li><a href="#">Рыба и морепродукты</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="ifort-breadcrumbs">
+      <div class="main-wrapper">
+        <div class="ifort-breadcrumbs__wrap">
+          <a href="#" class="ifort-breadcrumbs__item-link">
+            Главная
+
+            <svg class="icon icon-arrow-long-right ifort-breadcrumbs__separator">
+              <use xlink:href="svg/sprite/sprite.svg#arrow-long-right"></use>
+            </svg>
+          </a>
+
+          <a href="#" class="ifort-breadcrumbs__item-link">
+            Каталог
+            <svg class="icon icon-arrow-long-right ifort-breadcrumbs__separator">
+              <use xlink:href="svg/sprite/sprite.svg#arrow-long-right"></use>
+            </svg>
+          </a>
+
+          <span class="ifort-breadcrumbs__item-simple">Что-то там</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-cart">
+      <div class="main-wrapper"><h1 class="page-title">Корзина</h1></div>
+      <div class="page-cart__items"><div class="main-wrapper"></div></div>
+    </div>
+
+    <div class="pre-footer">
+      <div class="pre-footer__subscribe pre-footer-subscribe">
+        <div class="main-wrapper">
+          <div class="pre-footer-subscribe__wrap">
+            <h2 class="pre-footer-subscribe__title">Подпишитесь на наши новинки</h2>
+            <p class="pre-footer-subscribe__text">
+              От нас лучшие предложения по технике. Без спама. Только все самое интересное.
+            </p>
+
+            <form action="" class="pre-footer-subscribe__form">
+              <input type="text" placeholder="Укажите ваш e-mail" class="pre-footer-subscribe__input" />
+              <button type="submit" class="pre-footer-subscribe__submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="main-wrapper">
+        <div class="footer__wrap">
+          <div class="footer__left-area">
+            <div class="footer__logo footer-logo">
+              <a href="" class="footer-logo__link"> <img src="images/logo.svg" class="footer-logo__image" alt="" /> </a>
+            </div>
+            <div class="footer__contacts footer-contacts">
+              <div class="footer__phone footer-phone">
+                <a href="tel:+7 (351) 262-20-01" class="footer-phone__link"> +7 (351) 262-20-05 </a>
+              </div>
+
+              <div class="footer-contacts__contact">
+                <!-- <span class="icon i-city footer-contacts__contact-icon"></span> -->
+                <svg class="icon icon-city footer-contacts__contact-icon">
+                  <use xlink:href="svg/sprite/sprite.svg#city"></use>
+                </svg>
+                <p class="footer-contacts__contact-text">Челябинск, ул. Энтузиастов, 21</p>
+              </div>
+              <div class="footer-contacts__contact">
+                <svg class="icon icon-clocks2 footer-contacts__contact-icon">
+                  <use xlink:href="svg/sprite/sprite.svg#clocks2"></use>
+                </svg>
+                <p class="footer-contacts__contact-text">
+                  Часы работы: <br />
+                  Пн-Пт.: с 10:00 до 19:00 <br />
+                  Сб-Вс.: с 10:00 до 18:00
+                </p>
+              </div>
+              <div class="footer-contacts__contact footer-contacts__contact_centered">
+                <svg class="icon icon-envelope footer-contacts__contact-icon">
+                  <use xlink:href="svg/sprite/sprite.svg#envelope"></use>
+                </svg>
+                <p class="footer-contacts__contact-text">info@site.ru</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer__center-area">
+            <ul class="footer__menu footer-menu">
+              <li class="footer-menu__item">
+                <a href="" class="footer-menu__item-link"> О компании</a>
+                <ul class="footer-menu__submenu">
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link"> О компании </a>
+                  </li>
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link"> Новости </a>
+                  </li>
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link"> Сотрудники </a>
+                  </li>
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link"> Вакансии </a>
+                  </li>
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link"> Магазины </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="footer-menu__item">
+                <a href="" class="footer-menu__item-link">Информация</a>
+                <ul class="footer-menu__submenu">
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link"> Помощь </a>
+                  </li>
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link"> Условия оплаты </a>
+                  </li>
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link"> Условия доставки </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="footer-menu__item">
+                <a href="" class="footer-menu__item-link">Помощь</a>
+                <ul class="footer-menu__submenu">
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link"> Статьи </a>
+                  </li>
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link"> Вопрос-ответ </a>
+                  </li>
+                  <li class="footer-menu__submenu-item">
+                    <a href="#" class="footer-menu__submenu-item-link"> Производители </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__right-area">
+            <div class="footer__search products-search">
+              <form action="/catalog/" class="search1">
+                <input
+                  id="title-search-input-2"
+                  class="ifort-input products-search__input"
+                  type="text"
+                  name="q"
+                  placeholder="Поиск по сайту..."
+                  autocomplete="off"
+                />
+                <button id="search-submit-button" type="submit" class="products-search__submit">
+                  <span class="icon i-search"></span>
+                </button>
+              </form>
+            </div>
+
+            <div class="footer__right-area-aligner">
+              <!---->
+
+              <div class="footer__social footer-social">
+                <p class="footer-social__title">Мы в социальных сетях:</p>
+                <div class="footer-social__links">
+                  <a href="http://vk.com/ifort" class="footer-social__link">
+                    <svg class="icon icon-vk footer-social__icon">
+                      <use xlink:href="svg/sprite/sprite.svg#vk"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="footer__payment footer-payment">
+                <p class="footer-payment__title">Мы принимаем к оплате:</p>
+                <div class="footer-payment__items">
+                  <svg class="icon icon-card-visa footer-payment__item">
+                    <use xlink:href="svg/sprite/sprite.svg#card-visa"></use>
+                  </svg>
+
+                  <svg class="icon icon-card-mastercard footer-payment__item">
+                    <use xlink:href="svg/sprite/sprite.svg#mastercard"></use>
+                  </svg>
+
+                  <svg class="icon icon-card-mir footer-payment__item">
+                    <use xlink:href="svg/sprite/sprite.svg#card-mir"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright-area footer-copyright">
+        <div class="main-wrapper">
+          <p class="footer-copyright__text">2019 © Цифровой центр "Форт-Электроникс". Все права защищены</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
