@@ -1,0 +1,30 @@
+.page-info-menu
+  position: sticky
+  top: 0
+  list-style: none
+  padding: 0
+  margin: 0
+
+.page-info-menu-item
+  &:not(:last-of-type)
+    .page-info-menu-item__link
+      border-bottom: 0
+  &__link
+    position: relative
+    display: block
+    height: 49px
+    width: 258px
+    padding: 14px 35px 14px 20px
+    border: 1px solid #e8e8e8
+    font-size: 15px
+    &_current
+      color: $orange-color
+    &:hover::before,
+    &_current::before
+      content: ''
+      width: 3px
+      background-color: $orange-color
+      position: absolute
+      left: 0
+      height: 100%
+      top: 0
