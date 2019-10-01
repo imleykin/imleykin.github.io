@@ -13,6 +13,7 @@
     height: 0
     overflow: hidden
     position: absolute
+    top: 25px
     left: 0
     right: 0
     box-shadow: 0 6px 12px rgba(0,0,0,.175)
@@ -22,6 +23,7 @@
       display: flex
 
 .catalog-menu-item
+  height: 36px
   &:hover
     & .catalog-menu-item__link
       color: $orange-color
@@ -32,6 +34,7 @@
       transition: opacity .25s ease
       padding: 20px
   &__link
+    font-family: PF BeauSans Pro Bbook
     font-size: 15px
     font-weight: 600
     transition: none
@@ -47,6 +50,7 @@
   &:not(:first-child)
     border-left: 1px solid #e9eaec
   &__item
+    font-family: PF BeauSans Pro Bbook
     padding: 4px 0 4px 5px
     &--title
       & a
