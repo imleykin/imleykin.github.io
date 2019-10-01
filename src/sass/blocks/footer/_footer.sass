@@ -80,13 +80,15 @@
 
 .footer-menu
   display: flex
-  justify-content: space-between
+  // justify-content: space-between
   flex-wrap: wrap
   max-width: 450px
   list-style-type: none
   margin: 0 auto
   padding: 0
   &__item
+    &:not(:last-of-type)
+      margin-right: 35px
     &-link
       font-weight: bold
       font-size: 20px
