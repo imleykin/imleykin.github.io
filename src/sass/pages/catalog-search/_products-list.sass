@@ -1,0 +1,20 @@
+$search-products-gutter: 20px
+
+.page-catalog-search-products-list
+  @include make-row($search-products-gutter)
+  &__item
+    @include make-col-ready($search-products-gutter)
+    @include make-col(3)
+    margin-bottom: $search-products-gutter
+
+    @include media-breakpoint-down(lg)
+      @include make-col(4)
+
+    // @include media-breakpoint-down(md)
+    //   @include make-col(4)
+
+    @media(max-width: 900px)
+      @include make-col(6)
+
+    @include media-breakpoint-down(sm)
+      @include make-col(12)
