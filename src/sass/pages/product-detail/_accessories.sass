@@ -1,0 +1,39 @@
+$accessories-products-gutter: 20px
+
+.page-product-detail-accessories
+  &__products
+    margin-top: 27px
+
+.page-product-detail-accessories-sections
+  display: flex
+  margin: -5px -14px
+  flex-wrap: wrap
+  &__item
+    border: 0
+    background: none
+    font-size: 16px
+    font-family: PF BeauSans Pro Bbook
+    font-weight: 600
+    margin: 5px 14px
+    padding: 0
+    cursor: pointer
+    &:hover,
+    &.active
+      color: $orange-color
+      transition: all 0.25s ease
+
+.page-product-detail-accessories-products
+  @include make-row($accessories-products-gutter)
+  &__item
+    @include make-col-ready($accessories-products-gutter)
+    @include make-col(3)
+    margin-bottom: $accessories-products-gutter
+
+    @include media-breakpoint-down(lg)
+      @include make-col(4)
+
+    @media(max-width: 900px)
+      @include make-col(6)
+
+    @include media-breakpoint-down(sm)
+      @include make-col(12)
