@@ -23,6 +23,7 @@ $accessories-products-gutter: 20px
       transition: all 0.25s ease
 
 .page-product-detail-accessories-products
+  position: relative
   @include make-row($accessories-products-gutter)
   &__item
     @include make-col-ready($accessories-products-gutter)
@@ -37,3 +38,11 @@ $accessories-products-gutter: 20px
 
     @include media-breakpoint-down(sm)
       @include make-col(12)
+  &__loading-overlay
+    position: absolute
+    z-index: 10
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: rgba(255,255,255, 0.9)
